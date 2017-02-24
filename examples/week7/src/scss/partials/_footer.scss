@@ -1,0 +1,27 @@
+footer
+{
+    font-size: .88rem;
+
+    margin-top: 6rem;
+    padding: 1rem 0;
+
+    text-align: center;
+
+    color: $cs_white;
+    border-top: 1px solid #ccc;
+    background-color: $cs_gray;
+
+    @media screen and (min-width: 40.63rem)
+    {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+    }
+
+    p
+    {
+        margin: 0;
+    }
+}
