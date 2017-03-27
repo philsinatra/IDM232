@@ -1,9 +1,17 @@
 # IDM 232: Scripting for Interactive Digital Media II
 
+## Instructor Setup
+
+```bash
+cd ./bin/
+
+# Set week 7 `build` directory permissions
+./make.sh
+```
+
 ## TODO
 
-- week 6 presentation file
-- week 7 presentation file
-- week 8 presentation file
-- week 8 example files
-- homework assignments
+- [] review weeks 2-8
+- [] Workshop concept and assets
+- [] homework assignments
+- [] final project assignments?

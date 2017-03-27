@@ -1,0 +1,44 @@
+{
+  "categories":[
+    {
+      "question":"Category 1: Acceptable Forms of Identification",
+      "answers":[
+        "Driver's license",
+        "Government identification card",
+        "U.S. Armed Forces' identification card",
+        "Official passport",
+        "Credential that authorizes unescorted access to a security identification display area",
+        "Other form of identification found acceptable by the Administrator"
+      ]
+    },
+    {
+      "question":"Category 2: Eligibility Requirements (if applicable)",
+      "answers":[
+        "Meets age requirement",
+        "Ability to read, speak, write, and understand English",
+        "Medical certificate",
+        "Statement of Demonstrated Ability",
+        "Logbook endorsements"
+      ]
+    },
+    {
+      "question":"Category 3: Knowledge Requirements",
+      "answers":[
+        "Applicable regulations",
+        "Weather considerations",
+        "Aircraft performance",
+        "Principles of aerodynamics",
+        "Aeronautical decision-making, safe operation, and emergency procedures",
+        "Specific requirements for the certification/rating sought"
+      ]
+    },
+    {
+      "question":"Category 4: Experience",
+      "answers":[
+        "Training from an authorized instructor",
+        "Required minimum training time",
+        "Two or more approval documents"
+      ]
+    }
+  ]
+}

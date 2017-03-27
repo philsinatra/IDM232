@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Builder</title>
+</head>
+<body>
+  <form>
+    <button type="submit" id="btnSubmit">Build HTML Files</button>
+  </form>
+
+  <script>
+    var xhr = new XMLHttpRequest(),
+        method = 'GET',
+        url = 'app/bin/gen.php';
+
+    function generateFiles(event) {
+      event.preventDefault();
+      xhr.open(method, url, true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          console.log(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    var button = document.getElementById('btnSubmit');
+    button.addEventListener('click', generateFiles, false);
+  </script>
+</body>
+</html>
