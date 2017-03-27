@@ -98,11 +98,11 @@ MySQL Basics
 <tbody>
 <tr>
 <td>Homework Assignments / Class Participation</td>
-<td>60</td>
+<td>50</td>
 </tr>
 <tr>
 <td>Final Project</td>
-<td>40</td>
+<td>50</td>
 </tr>
 </tbody>
 </table>
@@ -196,6 +196,7 @@ MySQL Basics
 
 
 ### Add, Drop and Withdrawal Policies
+
 <p>During the pre-enrollment period through the end of the second week of classes for the term, all students, with the exception of 1st term freshmen, may add courses that are free from restrictions/permissions, by using BANNER Web for Students. See <a href="http://www.drexel.edu/provost/policies/course_add.asp" target="_blank">http://www.drexel.edu/provost/policies/course_add.asp</a></p>
 <p>If you add this course after the start of the term, you are responsible for completing ALL work that you may have missed.</p>
 <p>For both graduate and undergraduate students, courses may only be dropped during the “drop period” lasting from the beginning of the enrollment period through the end of the second week of the quarter. Dropping a course results in the course being removed from the student’s academic record without a “W” appearing on the transcript—specifically, neither the course nor the grade of “W” appears on the student’s transcript. See <a href="http://www.drexel.edu/provost/policies/course_drop.asp" target="_blank">http://www.drexel.edu/provost/policies/course_drop.asp</a></p>
@@ -220,6 +221,7 @@ MySQL Basics
 <li>Using or processing specifically prepared materials during a test such as notes, formula lists, notes written on the students clothing, etc. that are not authorized Taking a test for someone else or permitting someone else to take a test for you</li>
 </ul>
 <p>Please also see the official Drexel university policy on Academic Dishonesty at <a href="http://www.drexel.edu/provost/policies/academic_dishonesty.asp" target="_blank">http://www.drexel.edu/provost/policies/academic_dishonesty.asp</a></p>
+
 ### Statement for Students with Disabilities:
 <p>Students with disabilities requesting accommodations and services at Drexel University need to present a current accommodation verification letter (AVL) to faculty before accommodations can be made. This MUST be done prior to the midterm! AVL’s are issued by the Office of Disability Services (ODS). For additional information, contact ODS at <a href="http://www.drexel.edu/oed/policies/Overview/" target="_blank">http://www.drexel.edu/oed/policies/Overview/</a></p>
 ### Acknowledging Conditions and Obligations in Syllabus
