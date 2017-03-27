@@ -6,4 +6,4 @@ All assignments are outlined and should be submitted on [Drexel Blackboard](http
 
 - [@philsinatra](https://github.com/philsinatra)
 - [@jervo](https://github.com/jervo)
-- [@findes][https://github.com/findes]
+- [@findes](https://github.com/findes)
