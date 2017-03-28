@@ -1,0 +1,106 @@
+header
+{
+    background-color: $cs_black;
+
+    @media screen and (min-width: 37.5em)
+    {
+        /*
+        Use CSS grid system on medium/large screens.
+        Setting the 'display' property to 'grid' initializes
+        the grid system for this container.
+        */
+        display: grid;
+
+        /*
+        Simple use case - split `header` into two columns.
+        Each column takes up '1fr' (one fraction) of the
+        element's width.
+        Splitting the element into two columns, each of
+        which take up an equal fraction of the whole,
+        creates two columns that each fill 50% of the
+        available width.
+        */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header__logo
+    {
+        padding: 1rem 0;
+
+        text-align: center;
+
+        @media screen and (min-width: 37.5em)
+        {
+            padding-left: 1rem;
+
+            text-align: left;
+        }
+    }
+
+    nav
+    {
+        border-top: 1px solid $cs_gray;
+
+        @media screen and (min-width: 37.5em)
+        {
+            // >= medium
+            // 'nav' element displays using flexbox.
+            display: flex;
+            // The element is positioning to the end
+            // of the row on both the primary and cross
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        ul
+        {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+            li
+            {
+                display: block;
+                a
+                {
+                    display: block;
+
+                    padding: 1rem;
+
+                    transition: background-color .3s ease;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    color: $cs_white;
+                    border-top: 1px solid lighten($cs_gray, 10%);
+                    border-bottom: 1px solid $cs_gray;
+                    &:hover
+                    {
+                        background-color: $cs_primary;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 37.5em)
+            {
+                // >= medium
+                // 'ul' element is a flexbox parent container.
+                // By default the direct children (li elements)
+                // will line up in a row that does not wrap.
+                display: flex;
+                // Move the content of the 'ul' to the end of the
+                // primary axis, which by default is a row.
+                justify-content: flex-end;
+                li
+                {
+                    a
+                    {
+                        display: block;
+
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

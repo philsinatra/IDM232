@@ -1,0 +1,76 @@
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 100%;
+    @media screen and (min-width: 68.75em)
+    {
+        font-size: 120%;
+    }
+}
+
+body
+{
+    font-family: $font_serif;
+
+    &.single-course
+    {
+        padding-bottom: 3rem;
+    }
+}
+
+img
+{
+    max-width: 100%;
+}
+
+figure
+{
+    margin: 0;
+    padding: 0;
+}
+
+p
+{
+    line-height: 1.5;
+}
+
+.single
+{
+    main * + *
+    {
+        margin-top: 1.5rem;
+    }
+
+    main * + *:not(p)
+    {
+        margin-top: 3rem;
+    }
+}
+
+.mast
+{
+    margin-bottom: 3rem;
+
+    text-align: center;
+
+    figure
+    {
+        margin-top: 0 !important;
+    }
+}
+
+.container
+{
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+    @media screen and (min-width: 68.75rem)
+    {
+        padding: 0;
+    }
+}
