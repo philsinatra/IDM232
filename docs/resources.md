@@ -2,14 +2,14 @@
 
 ## Lecture Slides
 
-- [Week 1](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W01.pdf)
-- [Week 2](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W02.pdf)
-- [Week 3](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W03.pdf)
-- [Week 4](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W04.pdf)
-- [Week 5](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W05.pdf)
-- [Week 6](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W06.pdf)
-- [Week 7](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W07.pdf)
-- [Week 8](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-W08.pdf)
+- [01 Introduction](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-01-introduction.pdf)
+- [02 Variables](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-02-variables.pdf)
+- [03 Control Structures](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-03-control_structures.pdf)
+- [04 Building With PHP](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-04-building.pdf)
+- [05 MySQL](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-05-mysql.pdf)
+- [06 A CMS](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-06-cms.pdf)
+- [07 Data Types](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-07-data_types.pdf)
+- [08 Regulating Page Access](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-08-access.pdf)
 
 ## Reading Material
 
