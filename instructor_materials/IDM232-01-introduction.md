@@ -24,6 +24,16 @@ You can find me at:
 - [@philsinatra](https://twitter.com/philsinatra)
 
 ---
+## Hello
+
+I am Jervis Thompson, professor in the Interactive Digital Media program.
+
+You can find me at:
+
+- st966rc2@drexel.edu
+- [@jervo](https://twitter.com/jervo)
+
+---
 
 ## About This Course
 

@@ -201,6 +201,7 @@ MySQL Basics
 <p>If you add this course after the start of the term, you are responsible for completing ALL work that you may have missed.</p>
 <p>For both graduate and undergraduate students, courses may only be dropped during the “drop period” lasting from the beginning of the enrollment period through the end of the second week of the quarter. Dropping a course results in the course being removed from the student’s academic record without a “W” appearing on the transcript—specifically, neither the course nor the grade of “W” appears on the student’s transcript. See <a href="http://www.drexel.edu/provost/policies/course_drop.asp" target="_blank">http://www.drexel.edu/provost/policies/course_drop.asp</a></p>
 <p>Drexel University allows students to drop a course through the end of the sixth week of the term. This means that you will not be allowed to drop a course, even if you are failing, after the sixth week of the term. The number of times you have already been absent, the status of your lab hours and, above all, the result of your midterm testing and other evaluations (chapter tests, quizzes, homework) are therefore your best guide to decide whether or not you should drop the course. See <a href="http://www.drexel.edu/provost/policies/pdf/course_withdrawal.pdf" target="_blank">http://www.drexel.edu/provost/policies/pdf/course_withdrawal.pdf</a></p>
+
 ### Plagiarism Policy:
 <p>Plagiarism is the inclusion of someone else’s words, ideas, or data as one’s own work. When a student submits work for credit that includes the words, ideas, or data of others, the source of that information must be acknowledged through complete, accurate, and specific references, and, if verbatim statements are included, through quotation marks as well. By placing his/her name on work submitted for credit, the student certifies the originality of all work not otherwise identified by appropriate acknowledgments. Plagiarism covers unpublished as well as published sources. Examples of plagiarism include, but are not limited to:</p>
 <ul>
@@ -224,6 +225,7 @@ MySQL Basics
 
 ### Statement for Students with Disabilities:
 <p>Students with disabilities requesting accommodations and services at Drexel University need to present a current accommodation verification letter (AVL) to faculty before accommodations can be made. This MUST be done prior to the midterm! AVL’s are issued by the Office of Disability Services (ODS). For additional information, contact ODS at <a href="http://www.drexel.edu/oed/policies/Overview/" target="_blank">http://www.drexel.edu/oed/policies/Overview/</a></p>
+
 ### Acknowledging Conditions and Obligations in Syllabus
 <p>The syllabus is a contract between the instructor and the student. It is very important that each student has read and understood all of the materials, assignments and due dates on the syllabus. The student acknowledges receipt of this syllabus and the information herein contained by continuing to attend classes and turn in assignments.</p>
 <p>This syllabus is intended as a guideline. The instructor reserves the right to change from it in interest of responding to individual class need.</p>
