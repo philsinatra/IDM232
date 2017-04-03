@@ -16,12 +16,10 @@ theme: Plain Jane, 2
 ---
 ## Hello
 
-I am Phil Sinatra, instructor in the Interactive Digital Media program.
-
-You can find me at:
-
-- ps42@drexel.edu
-- [@philsinatra](https://twitter.com/philsinatra)
+| Instructor | Email | Github/Twitter |
+| ---------- | ----- | ------ | ------- |
+| ![](https://avatars2.githubusercontent.com/u/1465808?v=3&s=460) Phil Sinatra | [ps42@drexel.edu](mailto:ps42@drexel.edu) | @philsinatra |
+| ![](https://avatars1.githubusercontent.com/u/1268159?v=3&s=460) Jervis Thompson | [st966rc2@drexel.edu](mailto:st966rc2@drexel.edu) | @jervo |
 
 ---
 
