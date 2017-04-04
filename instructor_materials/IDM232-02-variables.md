@@ -193,7 +193,7 @@ Avoid:
 ?>
 ```
 
-^ Here's an example - we start with `$greeting` and assign it's value to be _Hello_. Then we setup the `$target` variable and set it's value to _World_. Next we create a `$phrase` variable, and set its value equal to our `$greeting`, and then using the dot to concatenate multiple values, we add another sting, which is simply a space, another dot to concatenate the `$target` value. When we echo the `$phrase` variable, we get _Hello_, a space, and then _World_.
+^ Here's an example - we start with `$greeting` and assign it's value to be _Hello_. Then we setup the `$target` variable and set it's value to _World_. Next we create a `$phrase` variable, and set its value equal to our `$greeting`, and then using the dot to concatenate multiple values, we add another string, which is simply a space, another dot to concatenate the `$target` value. When we echo the `$phrase` variable, we get _Hello_, a space, and then _World_.
 
 ---
 
@@ -336,7 +336,7 @@ Length: 45
 Find: <?php echo strstr($third, "brown"); ?><br>
 ```
 
-Find: brow fox jumped over the lazy dog.
+Find: brown fox jumped over the lazy dog.
 
 ^  Find uses a function named `strstr`; you're finding a string within a string. So inside `$third` we're going to look for _brown_, and see what it returns.
 
@@ -462,7 +462,7 @@ Basic math: <?php echo ((1 + 2 + $var1) * $var2) / 2 - 5 ?>
 - `sqrt()`
 - `rand()`
 
-^ Just like strings, PHP has various functions available for working with numbers. I'm going going to go into detail with each of these, you can look up the information about these and all the available functions on php.net. Some examples include (_click_) converting a number to an absolute number, (_click_) raising a number to a specific power, (_click_) determining the square root of a number and (_click_) generating a random number.
+^ Just like strings, PHP has various functions available for working with numbers. I'm not going to go into detail with each of these, you can look up the information about these and all the available functions on php.net. Some examples include (_click_) converting a number to an absolute number, (_click_) raising a number to a specific power, (_click_) determining the square root of a number and (_click_) generating a random number.
 
 ---
 
@@ -551,7 +551,7 @@ $integer = 3;
 $float = 3.14;
 
 echo "Is {$integer} integer? " . is_int($integer);
-echo "Is {$integer} float? " . is_float($float);
+echo "Is {$float} float? " . is_float($float);
 ```
 
 ^ We can check variables to see if they are integers or floats using some built in functions.
@@ -792,7 +792,7 @@ $email_addresses = [
 
 ^ So the power of arrays, is that a set of information can be referenced by a single variable. Imagine if we have one thousand email addresses. We wouldn't want to create one thousand variables for those, instead we can assign all of them to an array, and then use one easy to reference variable to pull up each email address by its index. The other thing that's powerful about arrays is that they keep their information in the same order unless we change it. Whatever we put in the first pocket stays in the first pocket. So, arrays are good for keeping ordered lists.
 
-^ We can sort those 1000 email addresses and then they'll be kept in that order for us by the array. You can imagine how arrays are going to stop helping us when we start pulling records and data out of our database. We can retrieve 50 customer records sorted alphabetically by last name and store them in the array. And they'll stay sorted in that array by last name.
+^ We can sort those 1000 email addresses and then they'll be kept in that order for us by the array. You can imagine how arrays are going to start helping us when we start pulling records and data out of our database. We can retrieve 50 customer records sorted alphabetically by last name and store them in the array. And they'll stay sorted in that array by last name.
 
 ---
 
@@ -891,9 +891,9 @@ $email_addresses = [
 ```php
 <?php $numbers = array(8,23,15,42,16,4); ?>
 
-Count: <?php echo count($numbers); ?> // 6
-Max value: <?php echo max($numbers); ?> // 42
-Min value: <?php echo min($numbers); ?> // 4
+Count: <?php echo count($numbers); ?>    // 6
+Max value: <?php echo max($numbers); ?>  // 42
+Min value: <?php echo min($numbers); ?>  // 4
 ```
 
 ^ The `count` function will tell us how many items are in the array. `max` will tell us the maximum value, `min` the minimum value.
@@ -945,13 +945,22 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 
 ```php
 <?php $numbers = array(8,23,15,42,16,4); ?>
+```
 
-15 in array? <?php echo in_array(15, $numbers); // returns T/F
-19 in array? <?php echo in_array(19, $numbers); // returns T/F
+15 in array? 
+
+```php
+<?php echo in_array(15, $numbers); // returns T/F
+```
+
+19 in array? 
+
+```php
+<?php echo in_array(19, $numbers); // returns T/F
+```
 
 15 in array? 1
 19 in array?
-```
 
 ^ `in_array` allows us to find out if a value is in an array. It returns a true or false, if true, the function returns a **1**, if false then nothing is returned.
 
@@ -963,7 +972,7 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 
 ## Booleans
 
-^  A Boolean is a programming type that can either be true or false. That's it, one of those two values. And true is not the string true or even the number one. It's just simply the value true. Booleans are very useful in programming because we can use them when performing tests. For example, in the topic, we used the in array function to test whether an integer was inside of an array. The result was that the test was a Boolean, true if the integer was present, false if it was not. Let's start by creating ourselves a new workspace for this.
+^  A Boolean is a programming type that can either be true or false. That's it, one of those two values. And true is not the string true or even the number one. It's just simply the value true. Booleans are very useful in programming because we can use them when performing tests. For example, we used the `in_array` function to test whether an integer was inside of an array. The result was that the test was a Boolean, true if the integer was present, false if it was not. Let's start by creating ourselves a new workspace for this.
 
 ---
 
@@ -1010,7 +1019,7 @@ otherwise
 
 ## Constants
 
-^ Everything we've covered today has focused on variables. It's fitting that we end with constants, which is the opposite of a variable. A variable can change or vary, a constant can't change. It remains constantly set at the same value. Constants are going to be recognizable on PHP because they're always written in all capital letters and there's no dollar sign in front of them. They're also going to differ from variables in another way. The only way to set a value for constant is to use a function. The define function. You can't just use the equal sign to assign a value. Like you can with variable.
+^ Everything we've covered today has focused on variables. It's fitting that we end with constants, which is the opposite of a variable. A variable can change or vary, a constant can't change. It remains constantly set at the same value. Constants are going to be recognizable on PHP because they're always written in all capital letters and there's no dollar sign in front of them. They're also going to differ from variables in another way. The only way to set a value for constant is to use a function. The define function. You can't just use the equal sign to assign a value, like you can with variable.
 
 ---
 
