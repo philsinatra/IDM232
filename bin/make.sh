@@ -2,7 +2,7 @@
 cd ${0%/*}
 
 echo "Fixing week 7 'build' directory permissions:"
-chmod 777 ../examples/week7/app/build/
+chmod 777 ../examples/07-data_types/app/build/
 echo "Done"
 echo ""
 
