@@ -257,7 +257,7 @@ if (empty($quantity) && !is_numeric($quantity)) {
 }
 ```
 
-^ Here's another example. Let's say we have a form coming in. First we check the value coming in using a PHP function `empty` which will allow the value coming in to be zero, which otherwise might be interpreted as _false_. Net we check to make sure the value is a number. If both conditions are met, then the `echo` will **not** be executed.
+^ Here's another example. Let's say we have a form coming in. First we check the value coming in using a PHP function `empty` which will allow the value coming in to be zero, which otherwise might be interpreted as _false_. Next we check to make sure the value is a number. If both conditions are met, then the `echo` will **not** be executed.
 
 ---
 
@@ -621,7 +621,7 @@ while ($number <= 20) {
 }
 ```
 
-^ Here's another example that combines a while loop and if conditional statement. The _modulo_ operator (the percentage sign) determines i whether a number divides evenly by another number or nut, by returning the remainder. So, it returns the remainder once you divide. In this example, it will tell us how many are left over if we divide by two, so even numbers will not have a remainder, odd numbers will. The if statement will echo different text depending on the result.
+^ Here's another example that combines a while loop and if conditional statement. The _modulo_ operator (the percentage sign) determines i whether a number divides evenly by another number or not, by returning the remainder. So, it returns the remainder once you divide. In this example, it will tell us how many are left over if we divide by two, so even numbers will not have a remainder, odd numbers will. The if statement will echo different text depending on the result.
 
 ---
 
@@ -864,7 +864,7 @@ $person = [
 foreach ($person as $attribute => $data) {
 ```
 
-^ Now let's build our foreach loop. For each entry in the array `$person`, extract the data, storing the _key_ inside variable `$attribute` and the _value_ of that _key_ in the variable `$data`. So the first time through, the _key_ is "first_name", and the _value_ is "Homer".
+^ Now let's build our foreach loop. For each entry in the array `$person`, extract the data, storing the _key_ inside variable `$attribute` and the _value_ of that _key_ in the variable `$data`. So the first time through, the _key_ is "first\_name", and the _value_ is "Homer".
 
 ---
 
@@ -879,7 +879,7 @@ $person = [
 foreach ($person as $attribute => $data) {
 ```
 
-^ The second time through, the _key_ is "last_name" and the _value_ is "Simpson".
+^ The second time through, the _key_ is "last\_name" and the _value_ is "Simpson".
 
 ---
 
@@ -1391,7 +1391,7 @@ list($add_result, $subt_result) = add_subt(20,7);
 echo "Add: " . $add_result . "<br>Subtract: " . $subt_result;
 ```
 
-^ There is a function available to us called `list`. So this time, instead of `$result_array`, we're just going to say `list` and then in parentheses, provide the variables that we want to use. I'll call one add result an done subt result. So this will take the values from the returned array and assign them to add result and subt result. Then I can use those instead of the index value of an array. It takes all those elements that we package up into an array to get out of the function and immediately breaks them back down, unpacked and assigned to variables that have good, common sense names that are easy to identify and work with.
+^ There is a function available to us called `list`. So this time, instead of `$result_array`, we're just going to say `list` and then in parentheses, provide the variables that we want to use. I'll call one add result and one subt result. So this will take the values from the returned array and assign them to add result and subt result. Then I can use those instead of the index value of an array. It takes all those elements that we package up into an array to get out of the function and immediately breaks them back down, unpacked and assigned to variables that have good, common sense names that are easy to identify and work with.
 
 ---
 
