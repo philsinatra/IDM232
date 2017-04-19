@@ -1546,7 +1546,7 @@ echo paint();
 
 ```php
 function paint($room="office", $color="red") {
-  return "The color of the room is {$color}.<br>";
+  return "The color of the {$room} is {$color}.<br>";
 }
 
 echo paint("bedroom", "blue");
