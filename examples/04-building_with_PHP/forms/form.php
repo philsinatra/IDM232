@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Form</title>
   <style media="screen">
+    body {
+      font: 100%/1.5 sans-serif;
+    }
     form {
       height: 6.25rem;
       width: 6.25rem;

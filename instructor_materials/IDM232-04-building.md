@@ -494,7 +494,7 @@ if ($logged_in == 1) {
 
 ## `$_POST`
 
-^ That's the dollar sign, underscore followed by capitals POST. All the values posted in the form data will be in that associative array, ready for us to access, just like we did with the links. So, if a form has a first name input field, then we'll be able to ask the POST super global for the key that matches the input field name. When we submit forms, there's generally going to be two pages, one page which has the web form on it, ready to be filled out. And then, a second page that does the processing of the form. Let's trying building an example. (_exmaples/week4/forms/form.php_)
+^ That's the dollar sign, underscore followed by capitals POST. All the values posted in the form data will be in that associative array, ready for us to access, just like we did with the links. So, if a form has a first name input field, then we'll be able to ask the POST super global for the key that matches the input field name. When we submit forms, there's generally going to be two pages, one page which has the web form on it, ready to be filled out. And then, a second page that does the processing of the form. Let's trying building an example. (_examples/week4/forms/form.php_)
 
 ---
 
@@ -505,7 +505,7 @@ if ($logged_in == 1) {
   - Return error messages
   - Populate fields with previous values
 
-^ We don't have to have two pages for the process either. In some cases you may want to have a single page that contains both the form and the form processing; essentially we'll have a form that submits to itself. One of the benefits is that all of the logic related to the form is in one file (_click_). It also makes it easy to redisplay the form if there are errors (_click_). So let's say we had a login form, if there are errors logging in we can easily return those error messages, and repopulate the form with the values the user previously entered. (_exmaples/week4/forms/form\_single-01.php_)
+^ We don't have to have two pages for the process either. In some cases you may want to have a single page that contains both the form and the form processing; essentially we'll have a form that submits to itself. One of the benefits is that all of the logic related to the form is in one file (_click_). It also makes it easy to redisplay the form if there are errors (_click_). So let's say we had a login form, if there are errors logging in we can easily return those error messages, and repopulate the form with the values the user previously entered. (_examples/week4/forms/form\_single-01.php_)
 
 ---
 

@@ -11,6 +11,7 @@
   // Let's extract each of the values and assign them to variables.
   $username = $_POST['username'];
   $password = $_POST['password'];
-
-  echo "{$username}: {$password}";
 ?>
+
+<p>Username: <?php echo $username; ?></p>
+<p>Password: <?php echo $password; ?></p>
