@@ -772,7 +772,7 @@ foreach ($array as $value)
 
 ---
 
-## Foreach Loopos
+## Foreach Loops
 
 ```php
 $ages = [4, 8, 15, 16, 23, 42];

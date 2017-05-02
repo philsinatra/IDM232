@@ -11,6 +11,10 @@
 - [07 Data Types](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-07-data_types.pdf)
 - [08 Regulating Page Access](http://digm.drexel.edu/crs/IDM232/presentations/pdf/IDM232-08-access.pdf)
 
+## Test Suite
+
+- [PHP Test Suite Files](http://digm.drexel.edu/crs/IDM232/cdn/tests.zip)
+
 ## Reading Material
 
 - [PHP & MySQL: Novice to Ninja](https://www.amazon.com/PHP-MySQL-Novice-Kevin-Yank/dp/0987153080)

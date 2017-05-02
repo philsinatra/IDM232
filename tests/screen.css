@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: ;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font: 100%/1.5 sans-serif;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 64em) {
+  body {
+    font-size: 150%;
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 56.25rem;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 1rem 0 .5rem;
+}
+
+h2 {
+  font-size: 1.13em;
+  margin: 1rem 0 .5rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+hr,
+pre {
+  margin: 3rem 0;
+}
+
+.solution {
+  background-color: #efefef;
+  border: 1px solid black;
+  margin-bottom: 3rem;
+  padding: 3rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+a.btn {
+  background-color: #292929;
+  border-radius: none;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  min-width: 6.25rem;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .3s ease;
+}
+
+a.btn:hover {
+  background-color: #616060;
+}
+
+a.btn_reload {
+  background-color: #46788d;
+}
+
+a.btn_reload:hover {
+  background-color: #5695af;
+}
+
+label {
+  display: block;
+  font-size: 0.75em;
+}
+
+form input {
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
+.btn_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+
+  background-color: #d0cccc;
+  border-radius: none;
+  border: none;
+  color: #222;
+  display: inline-block;
+  font-size: 1rem;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .3s ease;
+}
+
+.btn_menu:hover {
+  background-color: #afafaf;  
+}
