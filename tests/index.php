@@ -12,6 +12,7 @@
       <li><a href="02-variables.php?q=1">Variables (8 tasks)</a></li>
       <li><a href="03-controlstructures.php?q=1">Control Structures (12 tasks)</a></li>
       <li><a href="04-building.php?q=1">Building With PHP (3 tasks)</a></li>
+      <li><a href="05-databases.php?q=1">Working With Databases</a></li>
     </ul>
   </body>
 </html>
