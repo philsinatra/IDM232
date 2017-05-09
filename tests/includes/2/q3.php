@@ -7,7 +7,7 @@
 <pre>
   The lazy black fox slept.
 </pre>
-<p>Print the uppercase text to the screen.</p>
+<p>Print the text to the screen.</p>
 
 <pre class="solution">
 <?php
