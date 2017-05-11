@@ -1,6 +1,20 @@
 <?php require_once '../includes/db_connection.php'; ?>
 
 <?php
+
+/*
+CREATE TABLE `idm232-courses`.`courses` (
+  `id` int(11) NOT NULL NULL AUTO_INCREMENT,
+  `courseTitle` varchar(100),
+  `courseImageSmall` varchar(200),
+  `courseImageMedium` varchar(200),
+  `courseImageLarge` varchar(200),
+  `courseDetails` text,
+  `courseVisible` tinyint(1),
+  PRIMARY KEY (`id`)
+)ENGINE = InnoDB;
+*/
+
   // Check if the 'id' parameter
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
