@@ -29,15 +29,16 @@ theme: Plain Jane, 2
 ## The Database
 
 ```sql
-CREATE TABLE `courses` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `idm232-courses`.`courses` (
+  `id` int(11) NOT NULL NULL AUTO_INCREMENT,
   `courseTitle` varchar(100),
   `courseImageSmall` varchar(200),
   `courseImageMedium` varchar(200),
   `courseImageLarge` varchar(200),
   `courseDetails` text,
-  `courseVisible` tinyint(1)
-);
+  `courseVisible` tinyint(1),
+  PRIMARY KEY (`id`)
+)ENGINE = InnoDB;
 ```
 
 ^ Here's the SQL for the table we're creating. You can create this table in PHPMyAdmin. We're building a course catalog for the IDM department. Each course will have a title and details, and some images to use in the public website.
