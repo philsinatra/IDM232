@@ -696,4 +696,27 @@ function generateFiles(event) {
 
 ---
 
+## Why Build It This Way?
+
+^ So why did we build this project with the JSON format instead of using MySQL?
+
+---
+
+[.build-lists: false]
+
+## Some Answers
+
+- Microsoft XLSX
+- Windows OS
+- Google Chrome
+- 1920 x 1080
+- local web server
+- no firewall
+- no PHP/MySQL installed
+- will need more games over time
+
+^ Go back to the information we got from the client when we conducted our interview.
+
+---
+
 ## For Next Week...

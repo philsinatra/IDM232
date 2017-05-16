@@ -1,1 +1,132 @@
-*{box-sizing:border-box;margin:0;padding:0}html{font-size:100%}@media screen and (min-width: 68.75em){html{font-size:150%}}body{background-color:#222;font-family:Trebuchet, "Trebuchet MS", Tahoma, Verdana, Geneva, Arial, sans-serif;line-height:1.5}main{margin:2rem auto;max-width:60rem}main h1{color:#fff;margin:1rem 0;padding:0 1rem;text-align:center}main ul{list-style:none;margin:0 auto;max-width:70%}main ul li a{color:#fff;display:block;background:-webkit-linear-gradient(top, #4d89e6 0%, #134ba8 100%);background:linear-gradient(to bottom, #4d89e6 0%, #134ba8 100%);border:0.19rem solid #e9e9ef;margin-bottom:1rem;padding:0.25rem;text-align:center;text-decoration:none;text-shadow:0.13rem 0.13rem 0.25rem rgba(0,0,0,0.6);-webkit-transition:background 0.3s ease;transition:background 0.3s ease}main ul li a:focus,main ul li a:hover{background:-webkit-linear-gradient(top, #6398e9 0%, #1655bf 100%);background:linear-gradient(to bottom, #6398e9 0%, #1655bf 100%)}main ul li a .q_num{background:-webkit-linear-gradient(top, #1a3c99 0%, #0e2151 100%);background:linear-gradient(to bottom, #1a3c99 0%, #0e2151 100%);border:0.13rem solid #e9e9ef;border-radius:3.13rem;box-shadow:0.13rem 0.13rem 0.25rem rgba(0,0,0,0.6);display:block;font-size:2rem;font-weight:bold;height:3.13rem;margin:0.25rem auto;opacity:1;text-shadow:0.13rem 0.13rem 0.25rem rgba(0,0,0,0.6);width:3.13rem}main ul li a .q_answer{display:none;font-size:1rem;line-height:1.2;margin:0 auto;padding:0.5rem;text-align:left}@media screen and (min-width: 43.75rem){main ul li a .q_answer{font-size:1.4rem}}.btn_pagenav{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;display:-webkit-box;display:-ms-flexbox;display:flex;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:absolute;top:0;-webkit-transition:background-color 0.3s ease;transition:background-color 0.3s ease;width:3.13rem}@media screen and (min-width: 43.75rem){.btn_pagenav{width:6.25rem}}.btn_pagenav:hover{background-color:rgba(255,255,255,0.05)}.btn_pagenav svg{width:4rem;height:4rem}#btn_prev{left:0}#btn_next{right:0}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html {
+    font-size: 100%
+}
+
+@media screen and (min-width: 68.75em) {
+    html {
+        font-size:150%
+    }
+}
+
+body {
+    background-color: #222;
+    font-family: Trebuchet, "Trebuchet MS", Tahoma, Verdana, Geneva, Arial, sans-serif;
+    line-height: 1.5
+}
+
+main {
+    margin: 2rem auto;
+    max-width: 60rem
+}
+
+main h1 {
+    color: #fff;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    text-align: center
+}
+
+main ul {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 70%
+}
+
+main ul li a {
+    color: #fff;
+    display: block;
+    background: -webkit-linear-gradient(top, #4d89e6 0%, #134ba8 100%);
+    background: linear-gradient(to bottom, #4d89e6 0%, #134ba8 100%);
+    border: 0.19rem solid #e9e9ef;
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0.13rem 0.13rem 0.25rem rgba(0,0,0,0.6);
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease
+}
+
+main ul li a:focus,main ul li a:hover {
+    background: -webkit-linear-gradient(top, #6398e9 0%, #1655bf 100%);
+    background: linear-gradient(to bottom, #6398e9 0%, #1655bf 100%)
+}
+
+main ul li a .q_num {
+    background: -webkit-linear-gradient(top, #1a3c99 0%, #0e2151 100%);
+    background: linear-gradient(to bottom, #1a3c99 0%, #0e2151 100%);
+    border: 0.13rem solid #e9e9ef;
+    border-radius: 3.13rem;
+    box-shadow: 0.13rem 0.13rem 0.25rem rgba(0,0,0,0.6);
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 3.13rem;
+    margin: 0.25rem auto;
+    opacity: 1;
+    text-shadow: 0.13rem 0.13rem 0.25rem rgba(0,0,0,0.6);
+    width: 3.13rem
+}
+
+main ul li a .q_answer {
+    display: none;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: left
+}
+
+@media screen and (min-width: 43.75rem) {
+    main ul li a .q_answer {
+        font-size:1.4rem
+    }
+}
+
+.btn_pagenav {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    width: 3.13rem
+}
+
+@media screen and (min-width: 43.75rem) {
+    .btn_pagenav {
+        width:6.25rem
+    }
+}
+
+.btn_pagenav:hover {
+    background-color: rgba(255,255,255,0.05)
+}
+
+.btn_pagenav svg {
+    width: 4rem;
+    height: 4rem
+}
+
+#btn_prev {
+    left: 0
+}
+
+#btn_next {
+    right: 0
+}
