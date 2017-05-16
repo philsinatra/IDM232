@@ -34,11 +34,11 @@ theme: Plain Jane, 2
 - developers will provide:
   - web app files
 
-^ We (the developers) have to take the information, build it into a functional web application, and provide the files back to the client so they can run the game in their training environment. Should be simple right? So where do we being?
+^ We (the developers) have to take the information, build it into a functional web application, and provide the files back to the client so they can run the game in their training environment. Should be simple right? So where do we begin?
 
 ---
 
-## How Should We Being?
+## How Should We Begin?
 
 ^ (Have students suggest a workflow to begin the project. Possibilities include: wireframes, style tiles, client interviews etc.)
 
