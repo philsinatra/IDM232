@@ -34,11 +34,11 @@ theme: Plain Jane, 2
 - developers will provide:
   - web app files
 
-^ We (the developers) have to take the information, build it into a functional web application, and provide the files back to the client so they can run the game in their training environment. Should be simple right? So where do we being?
+^ We (the developers) have to take the information, build it into a functional web application, and provide the files back to the client so they can run the game in their training environment. Should be simple right? So where do we begin?
 
 ---
 
-## How Should We Being?
+## How Should We Begin?
 
 ^ (Have students suggest a workflow to begin the project. Possibilities include: wireframes, style tiles, client interviews etc.)
 
@@ -693,6 +693,29 @@ function generateFiles(event) {
 ## Live Demo
 
 ^ (_examples/week7/build.html_) in a browser running through MAMP server.
+
+---
+
+## Why Build It This Way?
+
+^ So why did we build this project with the JSON format instead of using MySQL?
+
+---
+
+[.build-lists: false]
+
+## Some Answers
+
+- Microsoft XLSX
+- Windows OS
+- Google Chrome
+- 1920 x 1080
+- local web server
+- no firewall
+- no PHP/MySQL installed
+- will need more games over time
+
+^ Go back to the information we got from the client when we conducted our interview.
 
 ---
 
