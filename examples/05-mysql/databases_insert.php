@@ -21,7 +21,7 @@
 
   // Step 2: Preform Database Query
   $query = "INSERT INTO images (title, img, description)
-            VALUES ('{$title}', '${img}', '${description}')";
+            VALUES ('{$title}', '{$img}', '{$description}')";
   $result = mysqli_query($connection, $query);
 
   // Check there are no errors with our SQL statement
