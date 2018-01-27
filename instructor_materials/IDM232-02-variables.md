@@ -4,6 +4,7 @@ slidenumbers: true
 autoscale: true
 theme: Plain Jane, 2
 
+
 # IDM 232
 ## Scripting for<br>Interactive Digital Media II
 
@@ -48,7 +49,7 @@ theme: Plain Jane, 2
 ### Variable Names - camelCase
 
 ```php
-<?php  
+<?php
   $myVariable
 ?>
 ```
@@ -60,7 +61,7 @@ theme: Plain Jane, 2
 ### Variable Names
 
 ```php
-<?php  
+<?php
   $this_variable
   $this-variable
 ?>
@@ -73,7 +74,7 @@ theme: Plain Jane, 2
 ### Variable Names
 
 ```php
-<?php  
+<?php
   $product3
   $_book
   $__bookPage
@@ -109,7 +110,7 @@ Avoid:
 ## Variables
 
 ```php
-<?php  
+<?php
   $var1 = 10;
 
   echo $var1;
@@ -123,7 +124,7 @@ Avoid:
 ## Variables
 
 ```php
-<?php  
+<?php
   $var1 = "Hello world";
 
   echo $var1;
@@ -143,7 +144,7 @@ Avoid:
 ### Strings
 
 ```php
-<?php  
+<?php
   $var1 = "Hello world";
 
   echo $var1;
@@ -157,7 +158,7 @@ Avoid:
 ### Strings
 
 ```php
-<?php  
+<?php
   $var1 = "<p>Hello world</p>";
 
   echo $var1;
@@ -171,7 +172,7 @@ Avoid:
 ### Strings
 
 ```php
-<?php  
+<?php
   $var1 = "Hello world";
   $var2 = 'Hello world';
 ?>
@@ -184,7 +185,7 @@ Avoid:
 ### Strings
 
 ```php
-<?php  
+<?php
   $greeting = "Hello";
   $target   = "World";
   $phrase   = $greeting . " " . $target;
@@ -266,50 +267,50 @@ Avoid:
 ## String Functions
 
 ```php
-Lowercase: <?php echo strtolower($thirds); ?><br>
-Uppercase: <?php echo strtoupper($thirds); ?><br>
-Uppercase first: <?php echo ucfirst($thirds); ?><br>
-Uppercase words: <?php echo ucwords($thirds); ?>
+Lowercase: <?php echo strtolower($third); ?><br>
+Uppercase: <?php echo strtoupper($third); ?><br>
+Uppercase first: <?php echo ucfirst($third); ?><br>
+Uppercase words: <?php echo ucwords($third); ?>
 ```
 
-^ Let's take a look at some string functions. This HTML includes some PHP tags calling some functions, the first is `stringtolower` which is the name of the function. Functions often take something as an argument, which serves as input into the function, and then they return output to you. So the input in this case is going to be inside the parenthesis, and it's going to be our variable `$thirds`.
+^ Let's take a look at some string functions. This HTML includes some PHP tags calling some functions, the first is `stringtolower` which is the name of the function. Functions often take something as an argument, which serves as input into the function, and then they return output to you. So the input in this case is going to be inside the parenthesis, and it's going to be our variable `$third`.
 
 ---
 
-## String Functions `strtolower($thirds)`
+## String Functions `strtolower($third)`
 
 ```php
-Lowercase: <?php echo strtolower($thirds); ?><br>
+Lowercase: <?php echo strtolower($third); ?><br>
 ```
 
 Lowercase: the quick brown fox jumped over the lazy dog.
 
 ---
 
-## String Functions `strtoupper($thirds)`
+## String Functions `strtoupper($third)`
 
 ```php
-Uppercase: <?php echo strtoupper($thirds); ?><br>
+Uppercase: <?php echo strtoupper($third); ?><br>
 ```
 
 Uppercase: THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 ---
 
-## String Functions `ucfirst($thirds)`
+## String Functions `ucfirst($third)`
 
 ```php
-Uppercase first: <?php echo ucfirst($thirds); ?><br>
+Uppercase first: <?php echo ucfirst($third); ?><br>
 ```
 
 Uppercase first: The quick brown fox jumped over the lazy dog.
 
 ---
 
-## String Functions `ucwords($thirds)`
+## String Functions `ucwords($third)`
 
 ```php
-Uppercase words: <?php echo ucwords($thirds); ?><br>
+Uppercase words: <?php echo ucwords($third); ?><br>
 ```
 
 Uppercase words: The Quick Brown Fox Jumped Over The Lazy Dog.
@@ -947,13 +948,13 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 <?php $numbers = array(8,23,15,42,16,4); ?>
 ```
 
-15 in array? 
+15 in array?
 
 ```php
 <?php echo in_array(15, $numbers); // returns T/F
 ```
 
-19 in array? 
+19 in array?
 
 ```php
 <?php echo in_array(19, $numbers); // returns T/F
@@ -1026,7 +1027,7 @@ otherwise
 ## Constants
 
 ```php
-<?php  
+<?php
   $max_width = 980;
 ?>
 ```
@@ -1038,7 +1039,7 @@ otherwise
 ## Constants
 
 ```php
-<?php  
+<?php
   $max_width = 980;
   MAX_WIDTH = 980; // !! Does not work
 ?>
@@ -1051,7 +1052,7 @@ otherwise
 ## Constants
 
 ```php
-<?php  
+<?php
   $max_width = 980;
   define("MAX_WIDTH", 980);
   echo MAX_WIDTH;
@@ -1065,7 +1066,7 @@ otherwise
 ## Constants
 
 ```php
-<?php  
+<?php
   $max_width = 980;
   define("MAX_WIDTH", 980);
 
