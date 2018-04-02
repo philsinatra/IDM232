@@ -44,12 +44,12 @@ By the end of the course, student will be able to
 | Week 2 | Variables |
 | Week 3 | Control Structures |
 | Week 4 | Building Pages With PHP |
-| Week | MySQL Basics |
-| Week | Building The CMS |
-| Week | Building The Front End |
-| Week | Regulate Page Access |
-| Week | Beta Review |
-| Week | Open Lab |
+| Week 5 | MySQL Basics |
+| Week 6 | Building The CMS |
+| Week 7 | Building The Front End |
+| Week 8 | Regulate Page Access |
+| Week 9 | Beta Review |
+| Week 10 | Open Lab |
 
 ## Grading
 
