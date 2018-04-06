@@ -55,8 +55,8 @@ By the end of the course, student will be able to
 
 | Aspect | Point Value |
 | ------ | ----------: |
-| Prototype | 25 |
 | Alpha | 25 |
+| Beta | 25 |
 | Final Project | 50 |
 
 ### Grading Scale
