@@ -39,7 +39,7 @@ Additional techniques, including, but not limited to the following may be used a
 
 ~~Asset files can be cloned from the [IDM232-assets repository](https://github.com/philsinatra/IDM232-assets). Instructions to complete the cloning process are included in the README file.~~
 
-[Download asset files](http://digm.drexel.edu/crs/IDM232/cdn/IDM232-assets.zip)
+[Download asset files](http://cdn.philsinatra.com/idm/IDM232-assets.zip)
 
 ## Project Requirements
 
