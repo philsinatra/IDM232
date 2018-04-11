@@ -6,16 +6,63 @@ theme: Plain Jane, 2
 
 
 # IDM 232
-## Scripting for<br>Interactive Digital Media II
+
+## Scripting for Interactive Digital Media II
 
 ---
 
-## Week 2
+## PHP
+
+### HTML-embedded scripting language
+
+^ Before we dive into code, it's important to understand what PHP is. PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
 ---
 
-![150%](http://digm.drexel.edu/crs/IDM232/presentations/images/php-html-code.jpg)
+### PHP Example - Inline
 
+```php
+<body>
+  <main>
+    <h1><?php echo 'Hello World'; ?></h1>
+  </main>
+</body>
+```
+
+---
+
+### PHP Example - External
+
+```php
+<?php
+  function helloWorld() {
+    return 'Hello World';
+  }
+?>
+
+<?php include 'component.php'; ?>
+<html>
+  <head>
+    ...
+```
+
+---
+
+### PHP Runs On The Server
+
+^ Let's walk through the difference between client and server side (whiteboard)
+
+---
+
+## Server Based Workflow
+
+^ Let's talk about our development workflow. (MAMP demo)
+
+---
+
+## Variables
+
+![fill](http://digm.drexel.edu/crs/IDM232/presentations/images/php-html-code.jpg)
 
 ^ Our exploration in the PHP programming language is going to begin with an exploration of the different structures or types that we can use while writing PHP. And the first of those that we're going to look at are variables. You're all familiar with variables from other programming. A variable is a symbolic representation of a value. You can think of it as a symbol that refers to something and that's going to make a lot more sense once we actually start using them. But as it's name suggests, it can change over time or vary. It has a variable value because it can point to different values. Now, in PHP, there's some rules about the kinds of names that we can give to variables.
 
@@ -373,7 +420,7 @@ The super-fast brown fox jumped...
 
 uick brown
 
-^ Substring is going to make a sub string of `$third` starting at the 5th position to the tenth position of the string.
+^ Substring is going to make a sub string of `$third` starting at the fifth position to the tenth position of the string.
 
 ---
 
@@ -594,7 +641,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
 ?>
 ```
 
@@ -606,7 +653,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
   echo $numbers[1];
 ?>
 ```
@@ -619,7 +666,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
   echo $numbers[1]; // 8
 ?>
 ```
@@ -632,7 +679,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $numbers = array(`0`,`1`,`2`);
+  $numbers = [`0`,`1`,`2`];
 ?>
 ```
 
@@ -644,7 +691,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
   echo $numbers[0]; // 4
 ?>
 ```
@@ -657,7 +704,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
 ?>
 ```
 
@@ -669,7 +716,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[2];
 ?>
 ```
@@ -682,7 +729,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[2]; // dog
 ?>
 ```
@@ -693,7 +740,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3];
 ?>
 ```
@@ -706,7 +753,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3]; // Array
 ?>
 ```
@@ -719,7 +766,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3][1];
 ?>
 ```
@@ -732,7 +779,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3][1]; // y
 ?>
 ```
@@ -761,7 +808,7 @@ $mixed[4] = "mouse";
 ## Arrays - Assigning Values
 
 ```php
-$mixed = array(6, "fox", "dog", array("x", "y", "z"));
+$mixed = [6, "fox", "dog", ["x", "y", "z"]];
 $mixed[4] = "mouse";
 ```
 
@@ -879,7 +926,7 @@ $email_addresses = [
 
 ```php
 <?php
-  $numbers = array(8,23,15,42,16,4);
+  $numbers = [8,23,15,42,16,4];
 ?>
 ```
 
@@ -890,7 +937,7 @@ $email_addresses = [
 ## Array Functions
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Count: <?php echo count($numbers); ?>    // 6
 Max value: <?php echo max($numbers); ?>  // 42
@@ -904,7 +951,7 @@ Min value: <?php echo min($numbers); ?>  // 4
 ## Array Functions
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
 Reverse sort: <?php rsort($numbers); print_r($numbers); ?>
@@ -917,7 +964,7 @@ Reverse sort: <?php rsort($numbers); print_r($numbers); ?>
 ## Array Functions
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
 Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
@@ -931,7 +978,7 @@ Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
 ## Array Functions
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
 Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
@@ -945,7 +992,7 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 ## Array Functions
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 ```
 
 15 in array?
