@@ -82,7 +82,7 @@
   ?>
 
   <!--
-  We could setup a new query here and build soemthing else if needed.
+  We could setup a new query here and build something else if needed.
   We've freed the previous result, so we're able to build something
   else if needed.
   -->

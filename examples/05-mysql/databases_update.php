@@ -20,6 +20,10 @@
   $img         = "http://placehold.it/350x150/000000/ffffff/";
   $description = "A placeholder image with a black background and white text.";
 
+  $title       = mysqli_real_escape_string($connection, $title);
+  $img         = mysqli_real_escape_string($connection, $img);
+  $description = mysqli_real_escape_string($connection, $description);
+
   // Step 2: Preform Database Query
   $query = "UPDATE images SET ";
   $query .= "title = '{$title}', ";

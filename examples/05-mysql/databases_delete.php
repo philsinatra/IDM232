@@ -15,7 +15,7 @@
   }
 
   // Often these are form values in $_POST
-  $id = 1;
+  $id = 5;
 
   // Step 2: Preform Database Query
   $query = "DELETE FROM images ";

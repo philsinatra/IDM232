@@ -5,11 +5,13 @@ autoscale: true
 theme: Plain Jane, 2
 
 # IDM 232
-## Scripting for<br>Interactive Digital Media II
+
+## Scripting for Interactive Digital Media II
 
 ---
 
 ## Week 5
+
 ### MySQL Basics
 
 ---
@@ -20,7 +22,7 @@ theme: Plain Jane, 2
 
 ---
 
-## MySQL Introduction
+## MySQL Capabilities
 
 - Read and write data
 - Stores more data
@@ -33,7 +35,7 @@ theme: Plain Jane, 2
 
 ---
 
-## MySQL
+## MySQL Benefits
 
 - Open source, free
 - Easy to use
@@ -52,10 +54,10 @@ theme: Plain Jane, 2
 
 ---
 
-## MySQL
+## MySQL != Spreadsheets
 
 - Databases are not spreadsheets
-  - Can define and travers relationships between tables
+  - Can define and traverse relationships between tables
   - Issue commands to interact with database
 - Spreadsheets are optimized for working with numbers
 - Databases are optimized for working with data
@@ -64,7 +66,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Common Database Terms
+## Common Database Terms: Database
 
 - Database
   - Set of tables
@@ -75,7 +77,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Common Database Terms
+## Common Database Terms: Table
 
 - Table
   - Set of columns and rows
@@ -89,7 +91,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Common Database Terms
+## Common Database Terms: Column
 
 - Column
   - Set of data of a single simple type
@@ -100,7 +102,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Common Database Terms
+## Common Database Terms: Row
 
 - Row
   - Single record of data
@@ -110,7 +112,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Common Database Terms
+## Common Database Terms: Field
 
 - Field
   - Intersection of a column and a row
@@ -120,7 +122,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Common Database Terms
+## Common Database Terms: Index & Foreign Key
 
 - Index
   - Data structure on a table to increase loop up speed
@@ -188,7 +190,7 @@ theme: Plain Jane, 2
 
 ---
 
-## CRUD
+## CRUD Acronym
 
 - Create
 - Read
@@ -198,6 +200,8 @@ theme: Plain Jane, 2
 ^ Once the database and table are established we're ready to begin working with data. You'll remember that I told you CRUD was an acronym. It stands for Create, Read, Update, and Delete and those are the four main operations that we perform on databases.
 
 ---
+
+[.build-lists: false]
 
 ### Create
 
@@ -217,7 +221,9 @@ CREATE TABLE `db_name`.`table_name` (
 
 ---
 
-## SQL Insert (Create)
+[.build-lists: false]
+
+### SQL Insert (Create)
 
 ```sql
 INSERT INTO `table_name` (column1, column2, column3)
@@ -230,7 +236,9 @@ VALUES (value1, value2, value3);
 
 ---
 
-## SQL Select (Read)
+[.build-lists: false]
+
+### SQL Select (Read) All
 
 ```sql
 SELECT *
@@ -245,7 +253,9 @@ ORDER BY column1 ASC;
 
 ---
 
-## SQL Select (Read)
+[.build-lists: false]
+
+## SQL Select (Read) Some
 
 ```sql
 SELECT `first_name`, `last_name`
@@ -258,9 +268,11 @@ ORDER BY `last_name` ASC;
 
 ---
 
-## SQL Select (Read)
+## SQL Select (Read) All Where
 
-```sql
+[.build-lists: false]
+
+```sql, [.highlight: 3]
 SELECT *
 FROM `table_name`
 WHERE column1 = 'some text'
@@ -273,9 +285,11 @@ ORDER BY column1 ASC;
 
 ---
 
-## SQL Select (Read)
+[.build-lists: false]
 
-```sql
+## SQL Select (Read) Order ASC
+
+```sql, [.highlight: 4]
 SELECT *
 FROM `table_name`
 WHERE column1 = 'some text'
@@ -286,9 +300,11 @@ ORDER BY column1 ASC;
 
 ---
 
-## SQL Select (Read)
+[.build-lists: false]
 
-```sql
+## SQL Select (Read) Order DESC
+
+```sql, [.highlight: 4]
 SELECT *
 FROM `table_name`
 WHERE column1 = 'some text'
@@ -298,6 +314,8 @@ ORDER BY column1 DESC;
 ^ We could do the opposite which would be descending order. There's a ton of options on our select statement that we could use to define exactly what content we want to read from the database, and how we want to display it.
 
 ---
+
+[.build-lists: false]
 
 ## SQL Select (Read)
 
@@ -311,6 +329,8 @@ ORDER BY `last_name` ASC;
 ^ So let's go back to our other read example. Here we break this down and it says - read from the database and select all the information in the `first_name` and `last_name` columns in table `table_name` where the `first_name` value is equal to Phil, and sort those results alphabetically based on the `last_name` values.
 
 ---
+
+[.build-lists: false]
 
 ## SQL Update
 
@@ -326,6 +346,8 @@ WHERE id = 1;
 
 ---
 
+[.build-lists: false]
+
 ## SQL Delete
 
 ```sql
@@ -336,12 +358,6 @@ WHERE id = 1;
 ^ And then, last of all, we have DELETE. So this is an SQL DELETE statement. We say DELETE FROM table where id equals 1, or id equals 37.
 
 ^ It's going to delete that row from the database. Now, we don't have to use `id` as the specifier. We could say, `DELETE FROM table WHERE` first name equals Kevin, then all rows where `first_name` is equal to Kevin would be deleted. They all get deleted at the same time, it can be very powerful but most often we're going to just be deleting a single row, we're going to identify it by it's unique id.
-
----
-
-## Populate the Database
-
-^ Let's add some data to our table in phpMyAdmin.
 
 ---
 
@@ -359,9 +375,9 @@ WHERE id = 1;
 
 ### Database APIs
 
-- `mysql` is the original, soon to be depreciated
-- `PDO` is robust - works with other types of databases
-- `mysqli` is our path!
+- `mysql`: the original, soon to be depreciated
+- `mysqli`: recommended
+- `PDO`: robust - works with other types of databases
 
 ^ You can review a comparison chart of all the differences and similarities between these methods online, in the interest of time I'll fast forward and tell you we're going to be learning `mysqli` which is robust, well documented and the path of least resistance for us to connect to our database and perform our CRUD functions.
 
@@ -387,7 +403,9 @@ WHERE id = 1;
 
 ---
 
-### Step 1: Create a database connection
+[.build-lists: false]
+
+### Step 1: Create A Database Connection Prep
 
 ```php
 $dbhost = "localhost";
@@ -401,23 +419,13 @@ $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 ^ Next we've got our user name. So, that's going to be the user that we connect to the database with. The default for local development is the root user who has full privileges. We could also create a new mysql user specifically for each project, which is actually ideal. When we move our database to our remote server we'll be doing that. Next is the password that you would use, so root is the default, again if we setup a different user there would be a unique password. The name that we gave our database is the last thing.
 
----
-
-### Step 1: Create a database connection
-
-```php
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "root";
-$dbname = "pjs_idm232";
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-```
-
 ^ So at this point if we run our page it will make a connection to the database. Next we need to check and see whether that connection was successful.
 
 ---
 
-### Step 1: Create a database connection
+[.build-lists: false]
+
+### Step 1: Create A Database Connection
 
 ```php
 if (mysqli_connect_errno()) {
@@ -428,13 +436,15 @@ if (mysqli_connect_errno()) {
 }
 ```
 
-^ The way to do that is to use `mysqli_connect_errorno` and error to find out. So here is an example of how you can do that. If `mysqli_connect_errno`, or if there is an error number, then we know that there was a problem. And at that point, we can say, well, the database connection failed. This checks for any error that occurred in the last transaction. If there's an error sitting there, at this point, we know that it's from whatever we just did.
+^ The way to do that is to use `mysqli_connect_errno` and error to find out. So here is an example of how you can do that. If `mysqli_connect_errno`, or if there is an error number, then we know that there was a problem. And at that point, we can say, well, the database connection failed. This checks for any error that occurred in the last transaction. If there's an error sitting there, at this point, we know that it's from whatever we just did.
 
 ^ And then die. That's a new bit of PHP, but it basically says just give up. It's like saying exit or break. Basically just says forget all other PHP, and completely and totally, fatally quit. So it gets out of there. And it's going to die with this message, database connection failed, and then I'm going to display the actual error using the error version. So `mysqli_connect`, and then error and then in parenthesis after it, I'll put the error number. Just so that we see that as well. So that's the message that it will die with. I'm just concatenating those strings together. So that'll then tell us did it succeed or not.
 
 ---
 
-### Step 5: Close database connection
+[.build-lists: false]
+
+### Step 5: Close Database Connection
 
 ```php
 mysqli_close($connection);
@@ -444,17 +454,9 @@ mysqli_close($connection);
 
 ---
 
-### Retrieving data from MySQL
+[.build-lists: false]
 
-- `mysqli_query()`
-- `mysqli_fetch_row()`
-- `mysqli_free_result()`
-
-^ We need to be able to issue queries from MySQL and then work with data that it brings back to us. To do that, we're going to learn three new functions. They're MySQL API functions. (_click_) They're `mysqli_query`, which is, of course, what we'll use to do our querying. Then if we get results back, (_click_) we'll use `mysqli_fetch_row`. To work with those results, and then as we listed as one of our key steps, (_click_) we want to free the result at the end. To tell PHP that it's okay to flush that memory and not try to hold onto those results any longer. That will free up some memory for us.
-
----
-
-### Step 2: Perform Database Query
+### Step 2: Building A Database Query
 
 ```php
 $query = "SELECT * FROM subjects";
@@ -465,6 +467,8 @@ $query = "SELECT * FROM subjects";
 ^ Now, my advice is to always define your query as a separate variable like this. It's really handy. Because then if you want to try to debug it later, it's very easy to just echo that query to the browser. If you're constructing something very complex, you could just say echo query. Find out what you were trying to send to MySQL that had some problems. Now, we've defined this string and set it to the variable but we haven't sent it to MySQL.
 
 ---
+
+[.build-lists: false]
 
 ### Step 2: Perform Database Query
 
@@ -477,7 +481,9 @@ mysqli_query($connection, $query);
 
 ---
 
-### Step 2: Perform Database Query
+[.build-lists: false]
+
+### Step 2: Catching A Database Query
 
 ```php
 $query = "SELECT * FROM subjects";
@@ -488,7 +494,9 @@ $result = mysqli_query($connection, $query);
 
 ---
 
-### Step 2: Perform Database Query
+[.build-lists: false]
+
+### Step 2: Checking A Database Query
 
 ```php
 $query = "SELECT * FROM subjects";
@@ -503,6 +511,18 @@ if (!$result) {
 ^ Okay, so now, we have back our results. So, our subjects are stored in our `$result` variable, in a resource set that we can then work with.
 
 ---
+
+### Retrieving data from MySQL
+
+- `mysqli_query()`
+- `mysqli_fetch_row()`
+- `mysqli_free_result()`
+
+^ We need to be able to issue queries from MySQL and then work with data that it brings back to us. To do that, we're going to learn three new functions. They're MySQL API functions. (_click_) They're `mysqli_query`, which is, of course, what we'll use to do our querying. Then if we get results back, (_click_) we'll use `mysqli_fetch_row`. To work with those results, and then as we listed as one of our key steps, (_click_) we want to free the result at the end. To tell PHP that it's okay to flush that memory and not try to hold onto those results any longer. That will free up some memory for us.
+
+---
+
+[.build-lists: false]
 
 ### Step 3: Use Returned Data (if any)
 
@@ -523,6 +543,8 @@ if (!$result) {
 
 ---
 
+[.build-lists: false]
+
 #### While Statement
 
 ```php
@@ -533,7 +555,9 @@ while($row = mysqli_fetch_row($result)) {
 
 ---
 
-### Step 3: Use Returned Data (if any)
+[.build-lists: false]
+
+### Step 3: Use Returned Data
 
 ```php
 <body>
@@ -550,6 +574,8 @@ while($row = mysqli_fetch_row($result)) {
 
 ---
 
+[.build-lists: false]
+
 #### Increment Array Pointer
 
 ```php
@@ -564,7 +590,9 @@ while ($i < 10) {
 
 ---
 
-#### Increment Array Pointer
+[.build-lists: false]
+
+#### No Increment Array Pointer
 
 ```php
 while ($row = mysql_fetch_row($result)) {
@@ -576,6 +604,8 @@ while ($row = mysql_fetch_row($result)) {
 
 ---
 
+[.build-lists: false]
+
 ### Step 4: Release Returned Data
 
 ```php
@@ -586,13 +616,7 @@ mysqli_free_result($result);
 
 ---
 
-## Example Time
-
-^ Let's build an example and see these functions in action. (_examples/week5/databases.php_)
-
----
-
-## Working With Retrieved Data
+## Working With Retrieved Data: Fetch Rows
 
 - `mysqli_fetch_row`
   - Results are in a standard array
@@ -602,7 +626,7 @@ mysqli_free_result($result);
 
 ---
 
-## Working With Retrieved Data
+## Working With Retrieved Data: Fetch Assoc
 
 - `mysqli_fetch_assoc`
   - Results are in an associative array
@@ -612,7 +636,7 @@ mysqli_free_result($result);
 
 ---
 
-## Working With Retrieved Data
+## Working With Retrieved Data: Fetch Array
 
 - `mysqli_fetch_array`
   - Results in either or both types of arrays
@@ -621,6 +645,12 @@ mysqli_free_result($result);
 ^ Then we have a third option, which is (_click_) `mysqli_fetch_array`. Again, used in exactly the same way, but this time, the results are returned in either a standard array, or an associative array, or both. Which is essentially an associative array that indexes it both by integers and by the column names. Now by default, it's going to do both, that's configurable. The last argument that you pass in can be a constant that will tell it either to return a number index, an associative array with the column index or both. By default it's going to do both, which is going to make your data set and your memory a lot larger.
 
 ^ The fourth option is for an object oriented approach, which is a more advanced technique that we're not going to be covering in this class.
+
+---
+
+## Example Time
+
+^ Let's build an example and see these functions in action. (_examples/week5/databases.php_)
 
 ^ Let's look at examples of these techniques (_examples/week5/databases\_retrieval.php_)
 
@@ -650,7 +680,9 @@ mysqli_free_result($result);
 
 ---
 
-## SQL injections
+[.build-lists: false]
+
+## SQL injections: Single Quotes
 
 ```sql
 "INSERT INTO subjects (menu_name, position, visible)
@@ -661,18 +693,9 @@ VALUES ('About', 1, 1)"
 
 ---
 
-## SQL injections
+[.build-lists: false]
 
-```sql
-"INSERT INTO subjects (menu_name, position, visible)
-VALUES ('{$menu_name}', '{$position}', '{$visible}')"
-```
-
-^ Now let's imagine that we've written that so that it takes a dynamic value. Where we're going to now insert menu name and menu name is going to be a variable.
-
----
-
-## SQL injections
+## SQL injections: Dynamic Single Quotes
 
 ```sql
 "INSERT INTO subjects (menu_name, position, visible)
@@ -681,11 +704,15 @@ VALUES ('{$menu_name}', '{$position}', '{$visible}')"
 $menu_name = "Today's Trivia";
 ```
 
+^ Now let's imagine that we've written that so that it takes a dynamic value. Where we're going to now insert menu name and menu name is going to be a variable.
+
 ^ Well what if our menu name is Today's Trivia? What if that's the string that we want to drop in there? Insert into subjects, menu name position visible, the values Today's Trivia. Do you see the problem with that?
 
 ---
 
-## SQL injections
+[.build-lists: false]
+
+## SQL injections: Dynamic Single Quotes Problem
 
 ```sql
 "INSERT INTO subjects (menu_name, position, visible)
@@ -699,17 +726,15 @@ VALUES ('Today's Trivia', 1, 1)"
 
 ^ We're closing our single quotes without meaning to. The result of this is that MySQL thinks that the string that we're sending is "today," and that's it, and we have broken the rest of it. Everything else after that will be seen as being garbage and we'll get an error back.
 
----
-
-## SQL injections
-
 ^ Now, this is an innocent example, but sometimes the values that come in are not ours. URL strings, form data and cookies are often coming in from the public at large. And therefore they're completely out of our control as developers. And not everyone who comes to our website has our best interests in mind. If we use those values exactly as they come in we could be in for a world of hurt. Let me show you an example.
 
 ---
 
-## SQL injections
+[.build-lists: false]
 
-DO NOT DO THIS!
+## SQL injections 🙈
+
+️⚠️ DO NOT DO THIS! ⚠️
 
 ```sql
 $menu_name = "'); DROP TABLE subjects; '";
@@ -717,33 +742,19 @@ $menu_name = "'); DROP TABLE subjects; '";
 
 ^ Let's say that we have menu name and it's equal to that single quote at the beginning followed by some SQL that someone else would like us to run. Followed by another single quote at the end which they may have to modify it slightly so that it doesn't raise an error and it actually does execute. But you can see the result here.
 
----
-
-## SQL injections
-
-DO NOT DO THIS!
-
-```sql
-$menu_name = "'); DROP TABLE subjects; '";
-```
-
 ^ They're basically taking what was a simple insert statement and turning it into dropping our entire table of subjects. And they can do other things, too. They can actually have it export all of our users and their passwords. This process is called _SQL injection_. The user sends a carefully crafted URL string, or a form field value, and it injects their SQL into ours. SQL injection is the single easiest way for someone to hack your website and steal your data.
 
 ---
 
-## Escaping strings for MySQL
+## Escaping Strings For MySQL
 
 ^ The solution, is going to be that we need to escape the string. That is, to transform it so that any problem characters that are in it are rendered harmless, just like we did with the URL and HTML file names earlier.
-
----
-
-## Escaping strings for MySQL
 
 ^ The biggest problem comes from having a single quote in the data that you want to include in your SQL. The way to solve that is to escape the single quote, that is to tell MySQL this is not the single quote that ends the string, this is just part of the string.
 
 ---
 
-## Escaping strings for MySQL
+## Escaping Strings For MySQL Fix
 
 - Backslash before single-quote
 - `$menu_name = "Today\'s Trivia"`
@@ -752,7 +763,7 @@ $menu_name = "'); DROP TABLE subjects; '";
 
 ---
 
-## Escaping strings for MySQL
+## Escaping Strings For MySQL With PHP
 
 - `mysqli_real_escape_string($db, $string)`
 
@@ -760,7 +771,9 @@ $menu_name = "'); DROP TABLE subjects; '";
 
 ---
 
-## Escaping strings for MySQL
+[.build-lists: false]
+
+## Escaping Strings For MySQL: Review
 
 ```php
 "INSERT INTO subjects (menu_name, position, visible)
@@ -776,28 +789,26 @@ VALUES ('Today's Trivia', 1, 1)"
 
 ---
 
-## Escaping strings for MySQL
+[.build-lists: false]
+
+## Escaping Strings For MySQL: Problem
 
 ```php
 "INSERT INTO subjects (menu_name, position, visible)
 VALUES ('{$menu_name}', '{$position}', '{$visible}')"
+
+$menu_name = "Today's Trivia";
 ```
 
 ^ Right now we're just dropping whatever comes from our form directly into our values.
-
----
-
-## Escaping strings for MySQL
-
-```php
-$menu_name = "Today's Trivia";
-```
 
 ^ If we try to drop in this menu name, we're going to have a problem because of the single quote. We could escape it by hand, but that's not useful because if the information is coming from a form we won't know what the user is typing in the input. Instead we have to use a function.
 
 ---
 
-## Escaping strings for MySQL
+[.build-lists: false]
+
+## Escaping Strings For MySQL: Solution
 
 ```php
 $menu_name = mysqli_real_escape_string($connection, $menu_name);
@@ -807,11 +818,9 @@ $menu_name = mysqli_real_escape_string($connection, $menu_name);
 
 ---
 
-## What should you escape?
+## What To Escape
 
 - every string going into the database!
 - trust nothing
 
 ---
-
-## For next week...
