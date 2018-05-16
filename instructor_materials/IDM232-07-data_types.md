@@ -5,18 +5,20 @@ autoscale: true
 theme: Plain Jane, 2
 
 # IDM 232
+
 ## Scripting for<br>Interactive Digital Media II
 
 ---
 
 ## Week 7
+
 ### Reading and Writing Files and Data Types
 
 ---
 
 [.build-lists: false]
 
-## A New Job
+## Client Responsibilities
 
 - client will provide:
   - topics
@@ -29,7 +31,7 @@ theme: Plain Jane, 2
 
 [.build-lists: false]
 
-## A New Job
+## Developer Responsibilities
 
 - developers will provide:
   - web app files
@@ -38,7 +40,7 @@ theme: Plain Jane, 2
 
 ---
 
-## How Should We Begin?
+## Let's Plan A Project
 
 ^ (Have students suggest a workflow to begin the project. Possibilities include: wireframes, style tiles, client interviews etc.)
 
@@ -73,30 +75,32 @@ theme: Plain Jane, 2
 
 ---
 
-## Project Planning
+## Project Planning: Design
 
 - UI design
   - sketch/wireframe
   - style tiles
   - prototype
-- Data structure & development?
 
-^ (_click_) So the UI design portion of this is set - we can go off and work on sketches, wireframes, style tiles and being building the front end in the browser. But what about the back end? (_click_) Dealing with the data? The files are going to run on a web server, but we will not have PHP or MySQL available in the production environment.
+^ (_click_) So the UI design portion of this is set - we can go off and work on sketches, wireframes, style tiles and being building the front end in the browser.
+
+---
+
+## Project Planning: Development
+
+- Data structure & development?
+  - PHP: YES
+  - MySQL: maybe
+
+^ What about our development process? The files are going to run on a web server, but we will not have PHP or MySQL available in the production environment.
 
 ^ Can we still use PHP to build this project? Can we use MySQL? Should we use something else?
 
----
-
-## Project Planning
-
-- PHP: YES
-- MySQL: maybe
-
-^ I can tell you in this example, (_click_) we definitely can still use PHP, and we (_click_) may even use MySQL. Can anyone tell me how? Let's examine the data from the client. (_examples/week7/data.xlsx_)
+^ I can tell you in this example, (_click_) we definitely can still use PHP, and we may even use MySQL. Can anyone tell me how? Let's examine the data from the client. (_examples/07-data\_types/data.xlsx_)
 
 ---
 
-## Dealing With Data
+## Programming Options
 
 1. hand code HTML pages
 1. convert xlsx data to MySQL format
@@ -149,7 +153,7 @@ theme: Plain Jane, 2
 
 ---
 
-### JSON
+### JSON Example
 
 ```json
 {
@@ -170,13 +174,11 @@ theme: Plain Jane, 2
 
 ---
 
-## XLSX to JSON?
+## XLSX to JSON
 
-- XLSX to CSV
-- CSV to JSON
-- [converter](http://shancarter.github.io/mr-data-converter/)
+- XLSX (to CSV) to JSON
 
-^ So we could build the JSON file by hand, copying and pasting values from excel into a text document. Or we could use one of many conversion tools that already exist to do the conversion for us.
+^ We could build the JSON file by hand, copying and pasting values from excel into a text document. Or we could use one of many conversion tools that already exist to do the conversion for us.
 
 ---
 
@@ -203,7 +205,7 @@ $json = file_get_contents($json_source, 0, null, null);
 
 ---
 
-### PHP Reads JSON
+### PHP Decodes JSON
 
 ```php
 $json_source = "data.json";
@@ -217,7 +219,7 @@ $json_output = json_decode($json);
 
 ---
 
-### Output HTML Files
+### Output HTML Files - Build
 
 ```php
 $dir = "build/";
@@ -227,7 +229,7 @@ $dir = "build/";
 
 ---
 
-### Output HTML Files
+### Output HTML Files - `mkdir`
 
 ```php
 if (!file_exists($dir))
@@ -240,7 +242,7 @@ if (!file_exists($dir))
 
 ---
 
-### Output HTML Files
+### Our Data
 
 ```json
 {
@@ -261,7 +263,7 @@ if (!file_exists($dir))
 
 ---
 
-### Output HTML Files
+### Output HTML Files - Loop
 
 ```php
 foreach ($json_output->categories as $category) {
@@ -273,10 +275,13 @@ foreach ($json_output->categories as $category) {
 
 ### Output HTML Files
 
-#### JSON
+#### JSON Sample
 
 ```json
-"question":"Category 1: Acceptable Forms of Identification",
+{
+  "categories":[
+    {
+      "question":"Category 1: Acceptable Forms of Identification",
 ```
 
 #### PHP
@@ -290,7 +295,7 @@ foreach ($json_output->categories as $category) {
 
 ---
 
-### Output HTML Files
+### Output HTML Files - Answers
 
 ```json
 "answers":[
@@ -304,7 +309,7 @@ foreach ($json_output->categories as $category) {
 
 ---
 
-### Output HTML Files
+### Output HTML Files - Output Code
 
 ```php
 foreach ($json_output->categories as $category) {
@@ -320,7 +325,7 @@ foreach ($json_output->categories as $category) {
 
 ---
 
-### Output HTML Files
+### Output HTML Files - Output
 
 ```html
 <h1>Category 1: Acceptable Forms of Identification</h1>
@@ -333,7 +338,7 @@ foreach ($json_output->categories as $category) {
 
 ---
 
-### Output HTML Files
+### Writing a File
 
 ```php
 $file = fopen($dir . "question-" . $i . ".html", "w");
@@ -355,7 +360,7 @@ fclose($file);
 
 ---
 
-### Output HTML Files
+### Head Include
 
 ```html
 <!DOCTYPE html>
@@ -373,7 +378,7 @@ fclose($file);
 
 ---
 
-### Output HTML Files
+### Get File Contents
 
 ```php
 $head = 'includes/_head.php';
@@ -522,7 +527,7 @@ $output .= "var has_next_screen = 0;\r";
 
 ---
 
-### `gen.php` Scripts
+### `gen.php` Scripts - Previous
 
 ```php
 if ($i > 1)
@@ -533,7 +538,7 @@ if ($i > 1)
 
 ---
 
-### `gen.php` Scripts
+### `gen.php` Scripts - Next
 
 ```php
 if ($i != count($json_output->categories))
@@ -571,7 +576,7 @@ $output .= file_get_contents($footer);
 
 ---
 
-## How Do We Run It?
+## Run the Script
 
 - navigate to `gen.php` in browser
 - build a form and submit
@@ -640,7 +645,7 @@ $output .= file_get_contents($footer);
 
 ---
 
-## AJAX Example
+## AJAX Javascript
 
 ```javascript
 var xhr = new XMLHttpRequest(),
@@ -655,7 +660,7 @@ var xhr = new XMLHttpRequest(),
 ## AJAX Request
 
 ```javascript
-var button = document.getElementById('btnSubmit');
+const button = document.getElementById('btnSubmit');
 button.addEventListener('click', generateFiles, false);
 ```
 
@@ -663,7 +668,7 @@ button.addEventListener('click', generateFiles, false);
 
 ---
 
-## AJAX Request
+## AJAX Request - Generate Files
 
 ```javascript
 function generateFiles(event) {
@@ -696,7 +701,7 @@ function generateFiles(event) {
 
 ---
 
-## Why Build It This Way?
+## Why Build It This Way
 
 ^ So why did we build this project with the JSON format instead of using MySQL?
 
@@ -704,7 +709,7 @@ function generateFiles(event) {
 
 [.build-lists: false]
 
-## Some Answers
+## Because
 
 - Microsoft XLSX
 - Windows OS
@@ -719,4 +724,4 @@ function generateFiles(event) {
 
 ---
 
-## For Next Week...
+## For Next Week

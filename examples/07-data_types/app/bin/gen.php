@@ -1,15 +1,14 @@
 <?php
-  $head        = '../includes/_head.php';
-  $footer      = '../includes/_footer.php';
-
-  $jsonurl     = '../data/data.json';
+  $head = "../includes/_head.php";
+  $footer = "../includes/_footer.php";
+  $jsonurl = "../data/data.json";
 
   /**
-  * Get the contens of the .json file.
+  * Get the contents of the .json file.
   * This information is stored in the $json variable as a string.
   * @var string
   */
-  $json        = file_get_contents($jsonurl, 0, null, null);
+  $json = file_get_contents($jsonurl, 0, null, null);
 
   /**
   * Convert the string to a PHP variable that can then be manipulated.
@@ -20,6 +19,7 @@
   // A basic counter.
   $i = 1;
 
+  // The directory we will put the generated files.
   $dir = "../build/";
 
   /**
@@ -89,12 +89,12 @@
      *  The javascript is going to look for these variables and add eventListeners for
      *  page navigation.
      */
-    $output .= "var has_previous_screen = 0;\r";
-    $output .= "var has_next_screen = 0;\r";
+    $output .= "let hasPreviousScreen = 0;\r";
+    $output .= "let hasNextScreen = 0;\r";
     if ($i > 1)
-      $output .= "has_previous_screen = \"question-{$previous}.html\";\r";
+      $output .= "hasPreviousScreen = \"question-{$previous}.html\";\r";
     if ($i != count($json_output->categories))
-      $output .= "has_next_screen = \"question-{$next}.html\";\r";
+      $output .= "hasNextScreen = \"question-{$next}.html\";\r";
     $output .= "</script>";
 
     // Get the _footer.php file and add it to the end of each file.
