@@ -23,7 +23,7 @@
   <?php
     $text = "™©®è";
     echo htmlentities($text);
-   ?>
+  ?>
 
 </body>
 </html>

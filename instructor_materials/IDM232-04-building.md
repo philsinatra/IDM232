@@ -2,14 +2,16 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Dark Mode
 
 # IDM 232
+
 ## Scripting for<br>Interactive Digital Media II
 
 ---
 
 ## Week 4
+
 ### Building Web Pages with PHP
 
 ^ Now that we have our PHP fundamentals, we're ready to start building webpages with PHP.
@@ -32,7 +34,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Links and URLs
+## Link Methods
 
 | Type | Method |
 |:----:|:------:|
@@ -44,7 +46,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Using GET values
+## URL Parameter
 
 ```html
 <a href="somepage.php?page=2">
@@ -54,7 +56,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Using GET values
+## URL Parameters
 
 ```html
 <a href="somepage.php?category=7&page=3">
@@ -64,7 +66,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Using GET values
+## ## URL Parameter - `GET` Values
 
 ```html
 http://google.com/search?q=php
@@ -76,7 +78,7 @@ http://google.com/search?q=php
 
 ---
 
-## Using GET values
+## Super Global Variables
 
 - Super global variable
   - "Super global" for short
@@ -114,7 +116,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Reserved Characters
 
 - !
 - #
@@ -127,7 +129,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Reserved Characters
 
 - (
 - )
@@ -138,7 +140,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Reserved Characters
 
 - :
 - ;
@@ -162,7 +164,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Encoding GET values - `urlencode`
 
 ```php
 urlencode($string);
@@ -187,10 +189,6 @@ urlencode($string);
 ### `urlencode`
 
 ^ We successfully used `urlencode` to encode these characters and spaces, and then PHP decoded that information for us when we loaded our page. We didn't have to decode the information ourselves, PHP automatically does it for us. There is a function `urlencode` that works exactly like you would expect that you can use if you ever need to, but most times you won't. Note that all of this is for `GET` requests ONLY. Later when we work with `POST` and `COOKIE` we won't need to do any of this encoding. This is because those values are in the URL string.
-
----
-
-## Encoding GET values
 
 ^ So, now that we know about URL encoding, there's another type of encoding that we need to talk about called raw URL encoding and it's important to understand and to know the differences.
 
@@ -243,7 +241,7 @@ urlencode($string);
 
 ---
 
-## Encoding HTML
+## Encoding HTML - Setup
 
 ```html
 <div>
@@ -266,7 +264,7 @@ urlencode($string);
 
 ---
 
-### Reserved Characters in HTML
+### Reserved HTML Characters List
 
     <   &lt;
     >   &gt;
@@ -277,7 +275,7 @@ urlencode($string);
 
 ---
 
-## Encoding HTML
+## Encoding HTML Functions
 
 - `htmlspecialchars()`
 - `htmlentities()`
@@ -286,7 +284,7 @@ urlencode($string);
 
 ---
 
-## Encoding HTML
+## Encoding HTML Example
 
 ```html
 <a href="#">
@@ -324,7 +322,7 @@ $linktext = "<Click> & Learn More";
 
 ---
 
-## Encode HTML - `htmlentities`
+## Encode HTML - `htmlentities` Example
 
 ```php
 $text = "™©®è";
@@ -335,7 +333,7 @@ echo htmlentities($text);
 
 ---
 
-## So What?
+## So What
 
 ^ Let's look at how all this fits together.
 
@@ -435,7 +433,7 @@ $url .= "&" . "param2=" . urlencode($param2);
 
 ---
 
-## Redirect
+## Redirect Example
 
 ```php
 <?php
@@ -449,7 +447,7 @@ $url .= "&" . "param2=" . urlencode($param2);
 
 ---
 
-## Redirect
+## Redirect Function
 
 ```php
 function redirect_to($new_location) {
@@ -464,7 +462,7 @@ redirect_to("basic.html");
 
 ---
 
-## Redirect
+## Login Example
 
 ```php
 $logged_in = $_GET['logged_in'];

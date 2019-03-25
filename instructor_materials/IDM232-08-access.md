@@ -2,14 +2,16 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Dark Mode
 
 # IDM 232
-## Scripting for<br>Interactive Digital Media II
+
+## Scripting for Interactive Digital Media II
 
 ---
 
 ## Week 8
+
 ### Regulate Page Access
 
 ---

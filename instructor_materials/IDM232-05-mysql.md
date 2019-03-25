@@ -2,7 +2,7 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Dark Mode
 
 # IDM 232
 

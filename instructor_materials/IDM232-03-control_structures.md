@@ -2,14 +2,16 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Dark Mode
 
 # IDM 232
-## Scripting for<br>Interactive Digital Media II
+
+## Scripting for Interactive Digital Media II
 
 ---
 
 ## Week 3
+
 ### Control Structures: Logical Expressions
 
 ---
@@ -20,7 +22,7 @@ theme: Plain Jane, 2
 
 ---
 
-## If Statements
+## If Statements Structure
 
 ```php
 if (expression)
@@ -33,7 +35,7 @@ if (expression)
 
 ---
 
-## If Statements
+## If Statements - Simple Syntax
 
 ```php
 if ($a > $b)
@@ -44,7 +46,7 @@ if ($a > $b)
 
 ---
 
-## If Statements
+## If Statements - Standard Syntax
 
 ```php
 if ($a > $b) {
@@ -58,7 +60,7 @@ if ($a > $b) {
 
 ---
 
-## If Statements
+## If Statements - Simple Example
 
 ```php
 <?php
@@ -75,7 +77,7 @@ if ($a > $b) {
 
 ---
 
-## If Statements
+## If Statements - Another Example
 
 ```php
 <?php
@@ -91,7 +93,7 @@ if ($new_user) {
 
 ---
 
-## If Statements
+## If Statements - Multiple Checks
 
 ```php
 if ($a > $b) {
@@ -113,7 +115,7 @@ if ($b > $a) {
 
 ---
 
-## Else / ElseIf Statement
+## Else / ElseIf Statement Syntax
 
 ```php
 if ($a > $b) {
@@ -130,7 +132,7 @@ else {
 
 ---
 
-## Else / ElseIf Statement
+## Else / ElseIf Statement Example
 
 ```php
 if ($a > $b) {
@@ -145,7 +147,7 @@ elseif ($a < $b) {
 
 ---
 
-## Else / ElseIf Statement
+## Else / ElseIf Else Example
 
 ```php
 if ($a > $b) {
@@ -175,7 +177,6 @@ if ($a > $b) {
 - not equal: `!=`
 - not identical: `!==`
 
-
 ^ One of the most important ones, is equal. Are two things equal? Compare them. Is A equal to B? It's made up of two equal signs. When we're testing if something is equal, we use it by using two equal signs. So, when we have one equal sign, we're doing assignment. We're assigning a value to something. When we have two of them, we're comparing the two. It's important to keep the two straight. One is for assignment, two is for comparison.
 
 ^ We also have another version, which is three. Together which if for identical. Now, what's the difference between equal and identical? Well, there are some things that are considered equal because they're roughly equal. For example, the number 1, 2, 3 is considered equal to the string. One, two, three. Because if we convert the types, then they are considered equal but they are not considered identical.
@@ -198,7 +199,7 @@ if ($a > $b) {
 
 ---
 
-## Comparison and Logical Operators
+## Comparison - AND
 
 ```php
 $a = 4;
@@ -216,7 +217,7 @@ if (($a > $b) && ($c > $d)) {
 
 ---
 
-## Comparison and Logical Operators
+## Comparison - OR
 
 ```php
 $a = 4;
@@ -234,7 +235,7 @@ if (($a > $b) || ($c > $d)) {
 
 ---
 
-## Comparison and Logical Operators
+## Comparison - NOT
 
 ```php
 if (!isset($e)) {
@@ -247,7 +248,7 @@ echo $e;
 
 ---
 
-## Comparison and Logical Operators
+## Comparison Logic
 
 ```php
 $quantity = 0;
@@ -261,7 +262,7 @@ if (empty($quantity) && !is_numeric($quantity)) {
 
 ---
 
-## Comparison and Logical Operators
+## Comparison Logic Continued
 
 ```php
 $quantity = "";
@@ -281,7 +282,7 @@ if (empty($quantity) && !is_numeric($quantity)) {
 
 ---
 
-## Switch Statements
+## Switch Statement Syntax
 
 ```php
 switch (value) {
@@ -297,7 +298,7 @@ switch (value) {
 ^ First, let's look at the basic syntax. We're going to use the function name, `switch`, followed by an argument. And that argument's going to be a value. This is the value that we're going to be testing through each of a series of test cases. So then in our curly braces we're going to list off those test cases.
 
 ---
-## Switch Statements
+## Switch Statements Syntax
 
 ```php
 switch (value) {
@@ -314,7 +315,7 @@ switch (value) {
 
 ---
 
-## Switch Statements
+## Switch Statements Syntax
 
 ```php
 switch (value) {
@@ -331,7 +332,7 @@ switch (value) {
 
 ---
 
-## Switch Statements
+## Switch Statement Example
 
 ```php
 switch ($contact) {
@@ -348,7 +349,7 @@ switch ($contact) {
 
 ---
 
-## Switch Statements
+## Switch Statement Example
 
 ```php
 switch ($contact) {
@@ -365,7 +366,7 @@ switch ($contact) {
 
 ---
 
-## Switch Statements
+## Switch Statement Example
 
 ```php
 $a = 3;
@@ -374,11 +375,11 @@ switch ($a) {
   case 0:
     echo "a equals 0";
   case 1:
-    echo "a equals 1";        
+    echo "a equals 1";
   case 2:
     echo "a equals 2";
   case 3:
-    echo "a equals 3";          
+    echo "a equals 3";
 }
 ```
 
@@ -386,7 +387,7 @@ switch ($a) {
 
 ---
 
-## Switch Statements
+## Switch Statements BREAK
 
 ```php
 $a = 3;
@@ -407,7 +408,7 @@ switch ($a) {
 
 ---
 
-## Switch Statements
+## Zodiac Switch Statements
 
 ```php
 $year = 2013;
@@ -432,7 +433,7 @@ echo "{$year} is the year of the {$zodiac}";
 
 ---
 
-## Switch Statements
+## Zodiac Switch Statements
 
 ```php
 $year = 2013;
@@ -457,7 +458,7 @@ echo "{$year} is the year of the {$zodiac}";
 
 ---
 
-## Switch Statements
+## Switch Statements - Multiple User Types Example
 
 ```php
 $user_type = "customer";
@@ -482,7 +483,7 @@ switch ($user_type) {
 
 ---
 
-## Switch Statements
+## Switch Statements - Multiple User Types Solution
 
 ```php
 $user_type = "customer";
@@ -525,7 +526,7 @@ while (expression) {
 
 ---
 
-## While Loops
+## While Loops - Incrementing
 
 ```php
 while ($count <= 10) {
@@ -540,7 +541,7 @@ while ($count <= 10) {
 
 ---
 
-## While Loops
+## Endless While Loop 😢
 
 ```php
 while ($count <= 10) {
@@ -553,7 +554,7 @@ while ($count <= 10) {
 
 ---
 
-## While Loops
+## While Loop Example
 
 ```php
 $count = 0;
@@ -569,7 +570,7 @@ while ($count <= 10) {
 
 ---
 
-## While Loops
+## While Loop Example - Count
 
 ```php
 $count = 0;
@@ -586,7 +587,7 @@ echo "Count: {$count}";
 
 ---
 
-## While Loops
+## While Loops & Logic
 
 ```php
 $count = 0;
@@ -606,7 +607,7 @@ while ($count <= 10) {
 
 ---
 
-## While Loops
+## While Loops - Odd / Even
 
 ```php
 $number = 0;
@@ -631,7 +632,7 @@ while ($number <= 20) {
 
 ---
 
-## For Loops
+## For Loop Syntax
 
 ```php
 for (expr1; expr2; expr3) {
@@ -641,33 +642,13 @@ for (expr1; expr2; expr3) {
 
 ^ It looks very similar at first, except for the expression part. Instead of having one expression, we're going to have three separated by semicolons. And each one is going to perform a different function. Expression 1, is going to be executed the first time only, it's like an initializing statement before the loop starts. Expression 2 is the test expression that's going to be checked at the start of each loop.
 
----
-
-## For Loops
-
-```php
-for (expr1; expr2; expr3) {
-  statement
-}
-```
-
 ^ Just like the expression we had in the While Loop, Expression 3 is going to be executed at the end of every loop. Right after the loop finishes, right before it goes back and evaluates expression 2 again.
-
----
-
-## For Loops
-
-```php
-for (initial; test; each) {
-  statement
-}
-```
 
 ^ Perhaps a better way to think about it is as _initial_, _test_ and _each_. There's the initial value, there's a test that it's going to perform each time, and then each time through the last thing that it's going to do is execute that each statement.
 
 ---
 
-## For Loops
+## Compare Syntax - While Loop
 
 ```php
 $count = 0;
@@ -681,7 +662,7 @@ while ($count <= 10) {
 
 ---
 
-## For Loops
+## For Loop - Expression 1
 
 ```php
 for ($count = 0; )
@@ -691,7 +672,7 @@ for ($count = 0; )
 
 ---
 
-## For Loops
+## For Loop - Expression 2
 
 ```php
 for ($count = 0; $count <= 10; )
@@ -701,7 +682,7 @@ for ($count = 0; $count <= 10; )
 
 ---
 
-## For Loops
+## For Loop - Expression 3
 
 ```php
 for ($count = 0; $count <= 10; $count++)
@@ -711,7 +692,7 @@ for ($count = 0; $count <= 10; $count++)
 
 ---
 
-## For Loops
+## For Loop - Statement(s)
 
 ```php
 for ($count = 0; $count <= 10; $count++) {
@@ -723,7 +704,7 @@ for ($count = 0; $count <= 10; $count++) {
 
 ---
 
-## For Loops
+## For Loops - Odd / Even
 
 ```php
 for ($count = 0; $count <= 10; $count++) {
@@ -750,7 +731,7 @@ for ($count = 0; $count <= 10; $count++) {
 
 ---
 
-## Foreach Loops
+## Foreach Loops Syntax
 
 ```php
 foreach ($array as $value)
@@ -761,7 +742,7 @@ foreach ($array as $value)
 
 ---
 
-## Foreach Loops
+## Foreach Loops Syntax
 
 ```php
 foreach ($array as $value)
@@ -772,7 +753,7 @@ foreach ($array as $value)
 
 ---
 
-## Foreach Loops
+## Foreach Loops Example
 
 ```php
 $ages = [4, 8, 15, 16, 23, 42];
@@ -839,7 +820,7 @@ foreach ($array as $key => $value) {
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array Example
 
 ```php
 $person = [
@@ -854,7 +835,7 @@ $person = [
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array Breakdown
 
 ```php
 $person = [
@@ -868,7 +849,7 @@ foreach ($person as $attribute => $data) {
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array Breakdown
 
 ```php
 $person = [
@@ -883,7 +864,7 @@ foreach ($person as $attribute => $data) {
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array Example
 
 ```php
 foreach ($person as $attribute => $data) {
@@ -898,7 +879,7 @@ foreach ($person as $attribute => $data) {
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array Example
 
 ```php
 foreach ($person as $attribute => $data) {
@@ -914,7 +895,7 @@ foreach ($person as $attribute => $data) {
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array: Another Example
 
 ```php
 $prices = [
@@ -930,7 +911,7 @@ foreach ($prices as $item => $price) {
 
 ---
 
-## Foreach Loops - Associative Arrays
+## Foreach Loops - Associative Array: Another Example
 
 ```php
 $prices = [
@@ -959,23 +940,19 @@ foreach ($prices as $item => $price) {
 
 ## Continue
 
-^ We'll start with Continue. Continue is used inside a loop to skip the rest of the current iteration and to go immediately to the conditional valuation that starts the next iteration. As an example, think of a Hollywood casting director, shouting in the middle of an audition, "okay that's enough, next!". It's like saying, enough with this one, let's move on to the next one.
-
----
-
-## Continue
-
 ```php
 for ($count = 0; $count <= 10; $count++) {
   echo $count . ", ";
 }
 ```
 
+^ We'll start with Continue. Continue is used inside a loop to skip the rest of the current iteration and to go immediately to the conditional valuation that starts the next iteration. As an example, think of a Hollywood casting director, shouting in the middle of an audition, "okay that's enough, next!". It's like saying, enough with this one, let's move on to the next one.
+
 ^ That's what continue allows us to do. And it makes our code more efficient. Here's the same basic loop we looked at before, just counting numbers and echoing them out.
 
 ---
 
-## Continue
+## Continue Example
 
 ```php
 for ($count = 0; $count <= 10; $count++) {
@@ -993,12 +970,6 @@ for ($count = 0; $count <= 10; $count++) {
 
 ## Break
 
-^ We used `break` when we covered the `switch` statement, which allowed us to break out of a `case` within the statement. The `break` in a loop will similarly "break" us out of the loop, effectively ending execution of the loop. Go back to our Hollywood director example, this would be like the director watching a few auditions and then saying "You've got the job, the rest of the auditions are cancelled".
-
----
-
-## Break
-
 ```php
 for ($count = 0; $count <= 10; $count++) {
   if ($count == 5) {
@@ -1008,6 +979,8 @@ for ($count = 0; $count <= 10; $count++) {
   // 1, 2, 3, 4,
 }
 ```
+
+^ We used `break` when we covered the `switch` statement, which allowed us to break out of a `case` within the statement. The `break` in a loop will similarly "break" us out of the loop, effectively ending execution of the loop. Go back to our Hollywood director example, this would be like the director watching a few auditions and then saying "You've got the job, the rest of the auditions are cancelled".
 
 ^ We can look at our previous example, and change `continue` to `break` within our `if` statement.
 
@@ -1033,7 +1006,7 @@ function name
 
 ---
 
-## Functions Syntax
+## Functions Syntax - Arguments
 
 ```php
 function name($arg1, $arg2) {
@@ -1043,7 +1016,7 @@ function name($arg1, $arg2) {
 
 ---
 
-## Functions Syntax
+## Functions Syntax - Statements
 
 ```php
 function name($arg1, $arg2) {
@@ -1055,7 +1028,7 @@ function name($arg1, $arg2) {
 
 ---
 
-## Functions
+## Functions - Simple Example
 
 ```php
 function say_hello() {
@@ -1067,7 +1040,7 @@ function say_hello() {
 
 ---
 
-## Functions
+## Calling A Function
 
 ```php
 <?php say_hello(); ?>
@@ -1095,7 +1068,7 @@ say_something('Cowboy!')
 
 ---
 
-## Function Arguments
+## Passing Function Arguments
 
 ```php
 say_something('Cowboy!')
@@ -1166,7 +1139,7 @@ better_hello("Greetings", $name, "!!!");
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function Setup
 
 ```php
 function add($val1, $val2) {
@@ -1180,7 +1153,7 @@ add(3,4);
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Echo
 
 ```php
 function add($val1, $val2) {
@@ -1195,7 +1168,7 @@ add(3,4);
 
 ---
 
-## Returning Values From A Function
+## Flexibility When Returning Values From A Function
 
 ```php
 function add($val1, $val2) {
@@ -1210,7 +1183,7 @@ echo $sum; // ERROR!
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Return
 
 ```php
 function add($val1, $val2) {
@@ -1225,7 +1198,7 @@ add(3,4);
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Catch
 
 ```php
 function add($val1, $val2) {
@@ -1240,7 +1213,7 @@ $result = add(3,4);
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Catch & Echo
 
 ```php
 function add($val1, $val2) {
@@ -1256,7 +1229,7 @@ echo $result; // 7
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Catch & Use
 
 ```php
 function add($val1, $val2) {
@@ -1273,7 +1246,7 @@ echo $result; // 12
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Refactor Example
 
 ```php
 function better_hello($greeting, $target, $punct) {
@@ -1288,7 +1261,7 @@ better_hello("Hello", $name, "!");
 
 ---
 
-## Returning Values From A Function
+## Returning Values From A Function - Return Greeting
 
 ```php
 function better_hello($greeting, $target, $punct) {
@@ -1305,12 +1278,6 @@ echo better_hello("Hello", $name, "!");
 
 ## Multiple Return Values
 
-^ A function can only return a single value. So what if we need to return more than one value? Let's make an example.
-
----
-
-## Multiple Return Values
-
 ```php
 function add_subt($val1, $val2) {
   $add  = $val1 + $val2;
@@ -1319,11 +1286,13 @@ function add_subt($val1, $val2) {
 }
 ```
 
+^ A function can only return a single value. So what if we need to return more than one value? Let's make an example.
+
 ^ This function is called _add_ _subt_ which is short for subtraction. So it's going to add and subtract two values, value 1 and value 2. We know how to use `return` and how to return `$add`, but how can we also return `$subt`?
 
 ---
 
-## Multiple Return Values
+## Multiple Return Values - How To
 
 ```php
 function add_subt($val1, $val2) {
@@ -1340,7 +1309,7 @@ echo $result; // 15
 
 ---
 
-## Multiple Return Values
+## Multiple Return Values - Two Values
 
 ```php
 function add_subt($val1, $val2) {
@@ -1357,7 +1326,7 @@ echo $result; // ERROR! unexpected comma
 
 ---
 
-## Multiple Return Values
+## Multiple Return Values - Arrays
 
 ```php
 function add_subt($val1, $val2) {
@@ -1378,7 +1347,7 @@ echo "Add: " . $result_array[0] . "<br>Subtract: " . $result_array[1];
 
 ---
 
-## Multiple Return Values
+## Multiple Return Values - List Arrays
 
 ```php
 function add_subt($val1, $val2) {
@@ -1403,7 +1372,7 @@ echo "Add: " . $add_result . "<br>Subtract: " . $subt_result;
 
 ---
 
-## Scope and Global Variables
+## Scope and Global Variables Example
 
 ```php
 <?php
@@ -1415,7 +1384,7 @@ $bar = "outside"; // global scope
 
 ---
 
-## Scope and Global Variables
+## Scope and Global Variables - Global / Local
 
 ```php
 <?php
@@ -1431,7 +1400,7 @@ function foo() {
 
 ---
 
-## Scope and Global Variables
+## Scope and Global Variables Example
 
 ```php
 <?php
@@ -1451,7 +1420,7 @@ echo "2: " . $bar . "<br>";
 
 ---
 
-## Scope and Global Variables
+## Scope and Global Variables Example
 
 ```php
 <?php
@@ -1471,7 +1440,7 @@ echo "2: " . $bar . "<br>";
 
 ---
 
-## Scope and Global Variables
+## Scope and Global Variables Example
 
 ```php
 <?php
@@ -1498,7 +1467,7 @@ echo "2: " . $bar . "<br>"; // inside
 
 ---
 
-## Setting Default Argument Values
+## Setting Default Argument Value Syntax
 
 ```php
 function paint($color) {
@@ -1513,7 +1482,7 @@ echo paint("blue");
 
 ---
 
-## Setting Default Argument Values
+## Setting Default Argument Values - Error
 
 ```php
 function paint($color) {
@@ -1528,7 +1497,7 @@ echo paint();
 
 ---
 
-## Setting Default Argument Values
+## Setting Default Argument Value - Default Color Example
 
 ```php
 function paint($color="red") {
@@ -1542,7 +1511,7 @@ echo paint();
 
 ---
 
-## Setting Default Argument Values
+## Setting Multiple Default Argument Values
 
 ```php
 function paint($room="office", $color="red") {
@@ -1558,4 +1527,4 @@ echo paint("blue");
 
 ---
 
-## For Next Week...
+## For Next Week
