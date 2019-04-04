@@ -21,7 +21,6 @@ Here are some links to what I think are good examples. They are not crazy, but t
 
 - [http://simonpan.com/work/amazon-prime-music/](http://simonpan.com/work/amazon-prime-music/)
 - [https://design.google/library/evolving-google-identity/](https://design.google/library/evolving-google-identity/)
-- [http://www.wearetopsecret.com/case-studies/ubisoft](http://www.wearetopsecret.com/case-studies/ubisoft)
 - [https://www.gravitatedesign.com/work/visit-seattle/](https://www.gravitatedesign.com/work/visit-seattle/)
 
 ## Case Study Format
