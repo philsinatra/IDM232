@@ -1,24 +1,20 @@
 # Syllabus
 
-<!-- TOC -->
-
 - [Syllabus](#syllabus)
-	- [Description](#description)
-	- [Course Purpose](#course-purpose)
-	- [Learning Objectives](#learning-objectives)
-	- [Schedule and Required Materials](#schedule-and-required-materials)
-	- [Grading](#grading)
-		- [Grading Scale](#grading-scale)
-	- [Homework Submissions](#homework-submissions)
-	- [Critiques](#critiques)
-	- [Attendance Policy](#attendance-policy)
-	- [Add, Drop and Withdrawal Policies](#add-drop-and-withdrawal-policies)
-	- [Plagiarism Policy](#plagiarism-policy)
-		- [Drexel University Policy on Cheating](#drexel-university-policy-on-cheating)
-	- [Statement for Students with Disabilities](#statement-for-students-with-disabilities)
-	- [Acknowledging Conditions and Obligations in Syllabus](#acknowledging-conditions-and-obligations-in-syllabus)
-
-<!-- /TOC -->
+  - [Description](#description)
+  - [Course Purpose](#course-purpose)
+  - [Learning Objectives](#learning-objectives)
+  - [Schedule and Required Materials](#schedule-and-required-materials)
+  - [Grading](#grading)
+    - [Grading Scale](#grading-scale)
+  - [Homework Submissions](#homework-submissions)
+  - [Critiques](#critiques)
+  - [Attendance Policy](#attendance-policy)
+  - [Add, Drop and Withdrawal Policies](#add-drop-and-withdrawal-policies)
+  - [Plagiarism Policy](#plagiarism-policy)
+    - [Drexel University Policy on Cheating](#drexel-university-policy-on-cheating)
+  - [Statement for Students with Disabilities](#statement-for-students-with-disabilities)
+  - [Acknowledging Conditions and Obligations in Syllabus](#acknowledging-conditions-and-obligations-in-syllabus)
 
 ## Description
 
@@ -57,7 +53,8 @@ By the end of the course, student will be able to
 | ------ | ----------: |
 | Alpha | 25 |
 | Beta | 25 |
-| Final Project | 50 |
+| Case Study | 10 |
+| Final Project | 40 |
 
 ### Grading Scale
 
