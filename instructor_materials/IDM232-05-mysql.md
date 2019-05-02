@@ -66,6 +66,8 @@ theme: Dark Mode
 
 ---
 
+[.build-lists: false]
+
 ## Common Database Terms: Database
 
 - Database
@@ -76,6 +78,8 @@ theme: Dark Mode
 ^ Let's review some of the common database terms that we're going to be using. So that you'll recognize them when I use them and make sure we're all on the same page about their meaning. The first, is just (_click_) database. We can have several databases running in MySQL at the same time. A database is a set of tables. And each database will contain its own set of tables. We'll typically have one database for one application. So we build our web application. It's going to connect to one and only one database. And access permissions to our data are typically granted at the database level.
 
 ---
+
+[.build-lists: false]
 
 ## Common Database Terms: Table
 
@@ -91,6 +95,8 @@ theme: Dark Mode
 
 ---
 
+[.build-lists: false]
+
 ## Common Database Terms: Column
 
 - Column
@@ -102,6 +108,8 @@ theme: Dark Mode
 
 ---
 
+[.build-lists: false]
+
 ## Common Database Terms: Row
 
 - Row
@@ -112,6 +120,8 @@ theme: Dark Mode
 
 ---
 
+[.build-lists: false]
+
 ## Common Database Terms: Field
 
 - Field
@@ -121,6 +131,8 @@ theme: Dark Mode
 ^ (_click_) And then last of all, we have a field. And a field is the intersection of a column and a row. So for example, in the first name column, in the field for the user Phil, I have the data, Phil. So the field is actually the intersection between the two. Now, field is often used interchangeably with column. And you'll very often hear me flip the two around. Don't let that throw you but technically speaking a field is an intersection between a row and a column.
 
 ---
+
+[.build-lists: false]
 
 ## Common Database Terms: Index & Foreign Key
 
@@ -824,3 +836,5 @@ $menu_name = mysqli_real_escape_string($connection, $menu_name);
 - trust nothing
 
 ---
+
+## For Next Week
