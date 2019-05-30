@@ -77,6 +77,6 @@ Submit the following items in [Drexel Blackboard](https://learn.dcollege.net/) u
 1. A link to your self hosted website project page. From this page, I can fully engage the project and have access to all supplementary pages and functions.
 1. A link to your GitHub repository containing the code for your final project.
     - A copy of your MySQL database must be included in the repository.
-1. A link to your case study web page.
+1. A link to your [case study](case-study.md) web page.
 
 **Late submissions receive zero points.**

@@ -27,7 +27,7 @@ Here are some links to what I think are good examples. They are not crazy, but t
 
 ### Hero Image
 
-Show her image of final project.
+Show hero image of final project.
 
 ### The Overview
 
