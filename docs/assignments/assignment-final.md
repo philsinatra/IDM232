@@ -8,6 +8,7 @@ This page describes an assignment for this course. Due dates and submissions are
   - [Project Requirements](#project-requirements)
   - [Grading Criteria](#grading-criteria)
   - [Extra Credit](#extra-credit)
+  - [Screen Capture Video](#screen-capture-video)
   - [Submitting the Assignment](#submitting-the-assignment)
 
 ## Project Description
@@ -70,6 +71,14 @@ Your final project represents the culmination of ten weeks. This project will be
 
 In addition to the front end user interface, develop a content management system for the site, where an admin has the ability to add/edit/remove recipes to the site, all from a web interface.
 
+## Screen Capture Video
+
+As part of your final project submission, you are required to create a screen recording of your web application in action. This video should begin with your app's homepage, and then show the interface being interacted with. Scroll various pages, complete searches, use filters etc. Video requirements:
+
+- duration: minimum of 30 seconds
+- resolution: minimum of 1280x720
+- hosting: video **must** be hosted on Vimeo
+
 ## Submitting the Assignment
 
 Submit the following items in [Drexel Blackboard](https://learn.dcollege.net/) under **Final Project**:
@@ -78,5 +87,6 @@ Submit the following items in [Drexel Blackboard](https://learn.dcollege.net/) u
 1. A link to your GitHub repository containing the code for your final project.
     - A copy of your MySQL database must be included in the repository.
 1. A link to your [case study](case-study.md) web page.
+1. A link to your project screen capture video, hosted on Vimeo.
 
 **Late submissions receive zero points.**
