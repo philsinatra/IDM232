@@ -36,15 +36,15 @@ By the end of the course, student will be able to
 
 | Week | Topic |
 | ---- | ----- |
-| Week 1 | Introduction |
-| Week 2 | Variables |
-| Week 3 | Control Structures |
-| Week 4 | Building Pages With PHP |
+| Week 1 | Introduction & Basic Syntax |
+| Week 2 | Variables & Control Structures |
+| Week 3 | Building with PHP |
+| Week 4 | Alpha Review |
 | Week 5 | MySQL Basics |
-| Week 6 | Building The CMS |
-| Week 7 | Building The Front End |
-| Week 8 | Regulate Page Access |
-| Week 9 | Beta Review |
+| Week 6 | Scripting Solutions |
+| Week 7 | Building A Project |
+| Week 8 | Beta Review |
+| Week 9 | Working with Forms |
 | Week 10 | Open Lab |
 
 ## Grading
