@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Game Builder</title>
+	<meta charset="UTF-8">
+	<title>Game Builder</title>
 </head>
+
 <body>
-  <form>
-    <button type="submit" id="btnSubmit">Build HTML Files</button>
-  </form>
+	<form>
+		<button type="submit" id="btnSubmit">Build HTML Files</button>
+	</form>
 
-  <script>
-    /**
-     * AJAX function to execute PHP script when submit button is clicked.
-     * @type {XMLHttpRequest}
-     */
-    var xhr = new XMLHttpRequest(),
-        method = 'GET',
-        url = 'app/bin/gen.php';
+	<script>
+	/**
+	 * AJAX function to execute PHP script when submit button is clicked.
+	 * @type {XMLHttpRequest}
+	 */
+	const xhr = new XMLHttpRequest();
+	const method = 'GET';
+	const url = 'app/bin/gen.php';
 
-    /**
-     * Generate static HTML files by executing the
-     * 'app/bin/gen.php' script.
-     * This script is specified in the `url` variable above.
-     */
-    function generateFiles(event) {
-      // Prevent the default event which would be a form submission.
-      event.preventDefault();
+	/**
+	 * Generate static HTML files by executing the
+	 * 'app/bin/gen.php' script.
+	 * This script is specified in the `url` variable above.
+	 */
+	const generateFiles = (event) => {
+		// Prevent the default event which would be a form submission.
+		event.preventDefault();
 
-      // Open the `xhr` request to our `gen.php` script.
-      xhr.open(method, url, true);
-      // Listen for the `gen.php` script to execute.
-      xhr.onreadystatechange = function() {
-        // If the script executes successfully:
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-          // Check the browser console.
-          console.log(xhr.responseText);
-        }
-      };
-      // Send the request.
-      xhr.send();
-    }
+		// Open the `xhr` request to our `gen.php` script.
+		xhr.open(method, url, true);
+		// Listen for the `gen.php` script to execute.
+		xhr.onreadystatechange = function() {
+			// If the script executes successfully:
+			if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+				// Check the browser console.
+				console.log(xhr.responseText);
+			}
+		};
+		// Send the request.
+		xhr.send();
+	}
 
-    // A variable that finds the submit button in the DOM.
-    var button = document.getElementById('btnSubmit');
-    // Event listener for what to do when the submit button is 'click'ed.
-    button.addEventListener('click', generateFiles, false);
-  </script>
+	// A variable that finds the submit button in the DOM.
+	const button = document.getElementById('btnSubmit');
+	// Event listener for what to do when the submit button is clicked.
+	button.addEventListener('click', generateFiles, false);
+
+	</script>
 </body>
+
 </html>

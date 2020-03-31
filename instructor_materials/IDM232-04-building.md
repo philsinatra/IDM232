@@ -2,14 +2,16 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Work, 1
 
 # IDM 232
+
 ## Scripting for<br>Interactive Digital Media II
 
 ---
 
 ## Week 4
+
 ### Building Web Pages with PHP
 
 ^ Now that we have our PHP fundamentals, we're ready to start building webpages with PHP.
@@ -32,7 +34,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Links and URLs
+## Link Methods
 
 | Type | Method |
 |:----:|:------:|
@@ -40,21 +42,21 @@ theme: Plain Jane, 2
 | Forms | POST |
 | Cookies | COOKIE |
 
-^ The first is Get, the second is Post and the last is Cookie. So, URLs and Links are Get requests, a form is a Post request. And Cookie, well, it's not really a cookie request, but it's the way that we access the cookie information that piggybacks on each request. So, these are the three main things that we're going to be looking at. Now, every web language has a different way to interact with these three types of user data. We'll start by looking at URLs and links. (_examples/week4/links/page1.php_)
+^ The first is Get, the second is Post and the last is Cookie. So, URLs and Links are Get requests, a form is a Post request. And Cookie, well, it's not really a cookie request, but it's the way that we access the cookie information that piggybacks on each request. So, these are the three main things that we're going to be looking at. Now, every web language has a different way to interact with these three types of user data. We'll start by looking at URLs and links.
 
 ---
 
-## Using GET values
+## URL Parameter
 
 ```html
 <a href="somepage.php?page=2">
 ```
 
-^ We being by learning how to send a value from one page to the next by using the URL query parameters. The query parameters are the part of the URL that comes after the question mark. This is typically were you send additional parameters that the page needs. The format is always the name of the parameter, an equals sign and then the value of the parameter. Often these parameters modify the behavior of the code used to generate the returned HTML. For example, somepage.php?page=2 would process the same PHP code but the content return would probably be modified. It would do something like return a second page of search results.
+^ We being by learning how to send a value from one page to the next by using the URL query parameters. The query parameters are the part of the URL that comes after the question mark. This is typically were you send additional parameters that the page needs. The format is always the name of the parameter, an equals sign and then the value of the parameter. Often these parameters modify the behavior of the code used to generate the returned HTML. For example, `somepage.php?page=2` would process the same PHP code but the content return would probably be modified. It would do something like return a second page of search results.
 
 ---
 
-## Using GET values
+## URL Parameters
 
 ```html
 <a href="somepage.php?category=7&page=3">
@@ -64,7 +66,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Using GET values
+## ## URL Parameter - `GET` Values
 
 ```html
 http://google.com/search?q=php
@@ -72,16 +74,18 @@ http://google.com/search?q=php
 
 ^ You can search all over the web and find examples where these query parameters are being used. In PHP, whenever a page request is made, PHP is going to automatically take all of those query parameters that were sent with the URL and put them into an associative array where we can access them.
 
+^ _examples/04-building\_with\_PHP/links/page1.php_
+
 ---
 
-## Using GET values
+## Super Global Variables
 
 - Super global variable
   - "Super global" for short
   - Always available in all scopes
   - Assigned by PHP before processing page code
 
-^ That array is what is called a (_click_) Super global variable. We've talked about global variables before and we saw how we needed to call global on them to bring them into the local scope. Well super global's are always available in all scopes and PHP set's them for us before the page even starts processing. There are about nine super globals altogether. And we'll be looking at several of them later in this class. But right now we're only concerned with the super global that relates to the variables passed to the page via those URL parameters. And that one is called **GET**.
+^ The associative array that holds the `$_GET` values is what is called a (_click_) Super global variable. We've talked about global variables before and we saw how we needed to call global on them to bring them into the local scope. Well super globals are always available in all scopes and PHP set's them for us before the page even starts processing. There are about nine super globals altogether. And we'll be looking at several of them later in this class. But right now we're only concerned with the super global that relates to the variables passed to the page via those URL parameters. And that one is called **GET**.
 
 ---
 
@@ -91,7 +95,9 @@ http://google.com/search?q=php
 $_GET
 ```
 
-^ And that makes sense, because GET is the HTTP method that relates to URLs and links. And the way that we access it is with dollar sign, underscore and then all capitals GET. That's the name of the super global where the query parameters are put by PHP. Notice the underscore that's in the beginning. That's how all super globals are going to be named. This is why when we discussed naming your variables I recommended not starting your variable names with underscores; it will help these super globals really stand out. Let's see how we access these now. (return to _examples/week4/links/page1.php_ and _page2.php_)
+^ And that makes sense, because GET is the HTTP method that relates to URLs and links. And the way that we access it is with dollar sign, underscore and then all capitals GET. That's the name of the super global where the query parameters are put by PHP. Notice the underscore that's in the beginning. That's how all super globals are going to be named. This is why when we discussed naming your variables I recommended not starting your variable names with underscores; it will help these super globals really stand out. Let's see how we access these now.
+
+^ _examples/04-building\_with\_PHP/links/page2.php_
 
 ---
 
@@ -110,7 +116,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Reserved Characters
 
 - !
 - #
@@ -123,7 +129,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Reserved Characters
 
 - (
 - )
@@ -134,7 +140,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Reserved Characters
 
 - :
 - ;
@@ -158,7 +164,7 @@ $_GET
 
 ---
 
-## Encoding GET values
+## Encoding GET values - `urlencode`
 
 ```php
 urlencode($string);
@@ -174,17 +180,15 @@ urlencode($string);
 - Reserved characters become % + 2-digit hexadecimal
 - Spaces become "+"
 
-^ So, `urlencode` is going to take (_click_) letters, number, underscores and dashes and let them pass through completely unchanged. (_click_) But those reserve characters, that we just saw, are going to become their hexadecimal equivalent. That percent sign, follow by two digit hexadecimal digit number. (_click_) And spaces are going to become plus signs. Remember that, because that's going to be important in a minute. We'll talk about that. Let's try using it. (_examples/week4/urlencode/encode1.php_ | _encode2.php_)
+^ So, `urlencode` is going to take (_click_) letters, number, underscores and dashes and let them pass through completely unchanged. (_click_) But those reserve characters, that we just saw, are going to become their hexadecimal equivalent. That percent sign, follow by two digit hexadecimal digit number. (_click_) And spaces are going to become plus signs. Remember that, because that's going to be important in a minute. We'll talk about that. Let's try using it.
+
+^ _examples/04-building\_with\_PHP/urlencode/encode1.php_ | _encode2.php_
 
 ---
 
 ### `urlencode`
 
 ^ We successfully used `urlencode` to encode these characters and spaces, and then PHP decoded that information for us when we loaded our page. We didn't have to decode the information ourselves, PHP automatically does it for us. There is a function `urlencode` that works exactly like you would expect that you can use if you ever need to, but most times you won't. Note that all of this is for `GET` requests ONLY. Later when we work with `POST` and `COOKIE` we won't need to do any of this encoding. This is because those values are in the URL string.
-
----
-
-## Encoding GET values
 
 ^ So, now that we know about URL encoding, there's another type of encoding that we need to talk about called raw URL encoding and it's important to understand and to know the differences.
 
@@ -206,7 +210,9 @@ urlencode($string);
 - Reserved characters become % + 2-digit hexadecimal
 - Spaces become "%20"
 
-^ With `rawurlencode`, (_click_) letters, numbers, underscore and dash are unchanged. (_click_) The reserved characters get converted but, here's the big difference. (_click_) Spaces become percent 20. They get encoded into a two-digit hexadecimal also instead of using the plus. It may seem like a minor point, but it does make some big differences. It's easy for us to try it. (_examples/week4/urlencode/encode1.php_)
+^ With `rawurlencode`, (_click_) letters, numbers, underscore and dash are unchanged. (_click_) The reserved characters get converted but, here's the big difference. (_click_) Spaces become percent 20. They get encoded into a two-digit hexadecimal also instead of using the plus. It may seem like a minor point, but it does make some big differences. It's easy for us to try it.
+
+^ _examples/04-building\_with\_PHP/urlencode/encode1.php_
 
 ---
 
@@ -223,7 +229,9 @@ urlencode($string);
 
 ^ (_click_) You're going to want to use `rawurlencode` on the path, that's the portion that comes before the question mark. So, everything comes before that, if there's anything dynamic in there that you're generating, like the page name. That is all going to be done with raw URL encoding, because the spaces must be encoded as %20 for the final system to be able to find that file. For Apache to be able to locate the PHP page you're looking for, it needs it as %20.
 
-^ (_click_) But, you want to use `urlencode` on the query string. That's everything that comes after question mark. That's because spaces are better encoded as plus. (_examples/week4/urlencode/encode3.php_)
+^ (_click_) But, you want to use `urlencode` on the query string. That's everything that comes after question mark. That's because spaces are better encoded as plus.
+
+^ _examples/04-building\_with\_PHP/urlencode/encode3.php_
 
 ---
 
@@ -233,7 +241,7 @@ urlencode($string);
 
 ---
 
-## Encoding HTML
+## Encoding HTML - Setup
 
 ```html
 <div>
@@ -256,7 +264,7 @@ urlencode($string);
 
 ---
 
-### Reserved Characters in HTML
+### Reserved HTML Characters List
 
     <   &lt;
     >   &gt;
@@ -267,7 +275,7 @@ urlencode($string);
 
 ---
 
-## Encoding HTML
+## Encoding HTML Functions
 
 - `htmlspecialchars()`
 - `htmlentities()`
@@ -276,7 +284,7 @@ urlencode($string);
 
 ---
 
-## Encoding HTML
+## Encoding HTML Example
 
 ```html
 <a href="#">
@@ -314,7 +322,7 @@ $linktext = "<Click> & Learn More";
 
 ---
 
-## Encode HTML - `htmlentities`
+## Encode HTML - `htmlentities` Example
 
 ```php
 $text = "™©®è";
@@ -325,7 +333,7 @@ echo htmlentities($text);
 
 ---
 
-## So What?
+## So What
 
 ^ Let's look at how all this fits together.
 
@@ -365,11 +373,13 @@ $url .= "&" . "param2=" . urlencode($param2);
 </a>
 ```
 
-^ We also need to use `htmlspecialchars` to make sure we can display our HTML text that may include special characters. Now our URL and our HTML are safe to use as a link (_examples/week4/encode-full.php_).
+^ We also need to use `htmlspecialchars` to make sure we can display our HTML text that may include special characters. Now our URL and our HTML are safe to use as a link
+
+^ _examples/04-building\_with\_PHP/urlencode/encode-full.php_
 
 ---
 
-## Including are Requiring Files
+## Including Requiring Files
 
 ^ Let's change gears.
 
@@ -379,7 +389,9 @@ $url .= "&" . "param2=" . urlencode($param2);
 
 ## `include()`
 
-^ What works better is to have a file that contains a function and then we'll include that file in both PHP pages that need it. Even better, we can have a file dedicated to functions of a certain type and put all our functions in one, easy to locate, easy to include, place. And we can do that, by using PHP's `include` function. (_week4/includes/NOTES.md_)
+^ What works better is to have a file that contains a function and then we'll include that file in both PHP pages that need it. Even better, we can have a file dedicated to functions of a certain type and put all our functions in one, easy to locate, easy to include, place. And we can do that, by using PHP's `include` function.
+
+^ _examples/04-building\_with\_PHP/includes/NOTES.md_
 
 ---
 
@@ -421,7 +433,7 @@ $url .= "&" . "param2=" . urlencode($param2);
 
 ---
 
-## Redirect
+## Redirect Example
 
 ```php
 <?php
@@ -435,7 +447,7 @@ $url .= "&" . "param2=" . urlencode($param2);
 
 ---
 
-## Redirect
+## Redirect Function
 
 ```php
 function redirect_to($new_location) {
@@ -450,7 +462,7 @@ redirect_to("basic.html");
 
 ---
 
-## Redirect
+## Login Example
 
 ```php
 $logged_in = $_GET['logged_in'];
@@ -466,7 +478,7 @@ if ($logged_in == 1) {
 
 ^ If they are logged in, we're going to let them see basic.html. If they are not logged in, let's redirect them to somewhere else like google.com
 
-^ (_week4/redirect/redirect.php_)
+^ _examples/04-building\_with\_PHP/redirect/redirect.php_
 
 ^ redirect.php?logged_in=1
 
@@ -494,7 +506,9 @@ if ($logged_in == 1) {
 
 ## `$_POST`
 
-^ That's the dollar sign, underscore followed by capitals POST. All the values posted in the form data will be in that associative array, ready for us to access, just like we did with the links. So, if a form has a first name input field, then we'll be able to ask the POST super global for the key that matches the input field name. When we submit forms, there's generally going to be two pages, one page which has the web form on it, ready to be filled out. And then, a second page that does the processing of the form. Let's trying building an example. (_examples/week4/forms/form.php_)
+^ That's the dollar sign, underscore followed by capitals POST. All the values posted in the form data will be in that associative array, ready for us to access, just like we did with the links. So, if a form has a first name input field, then we'll be able to ask the POST super global for the key that matches the input field name. When we submit forms, there's generally going to be two pages, one page which has the web form on it, ready to be filled out. And then, a second page that does the processing of the form. Let's trying building an example.
+
+^ _examples/04-building\_with\_PHP/forms/form.php_
 
 ---
 
@@ -505,7 +519,9 @@ if ($logged_in == 1) {
   - Return error messages
   - Populate fields with previous values
 
-^ We don't have to have two pages for the process either. In some cases you may want to have a single page that contains both the form and the form processing; essentially we'll have a form that submits to itself. One of the benefits is that all of the logic related to the form is in one file (_click_). It also makes it easy to redisplay the form if there are errors (_click_). So let's say we had a login form, if there are errors logging in we can easily return those error messages, and repopulate the form with the values the user previously entered. (_examples/week4/forms/form\_single-01.php_)
+^ We don't have to have two pages for the process either. In some cases you may want to have a single page that contains both the form and the form processing; essentially we'll have a form that submits to itself. One of the benefits is that all of the logic related to the form is in one file (_click_). It also makes it easy to re-display the form if there are errors (_click_). So let's say we had a login form, if there are errors logging in we can easily return those error messages, and repopulate the form with the values the user previously entered.
+
+^ _examples/04-building\_with\_PHP/forms/form\_single-01.php_
 
 ---
 
@@ -808,4 +824,4 @@ echo form_errors($errors);
 
 ---
 
-## For Next Week...
+## For Next Week

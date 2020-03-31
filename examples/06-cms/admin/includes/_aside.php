@@ -1,7 +1,6 @@
-<aside class="col-md-3">
+<aside class="col-md-4">
   <h2>Courses</h2>
   <div class="list-group">
-
     <?php
       $query = 'SELECT id, courseTitle ';
       $query .= 'FROM courses ';
@@ -14,18 +13,20 @@
       }
 
       while ($course = mysqli_fetch_assoc($result)) {
-        echo '<a href="manage_courses.php?id=';
-        echo urlencode($course['id']);
-        echo '" class="list-group-item';
+        echo '<a href="index.php?id=';
+        echo urlencode($course["id"]);
+        echo '"';
+        echo 'class="list-group-item';
+
         if (isset($safe_id)) {
-          if ($course['id'] == $safe_id) {
-            echo ' active';
+          if ($course["id"] == $safe_id) {
+            echo " active";
           }
         }
-        echo '">';
-        echo $course['courseTitle'];
-        echo '</a>';
-      } // end while
+
+        echo '"';
+        echo ">{$course['courseTitle']}</a>";
+      } // end while loop
       mysqli_free_result($result);
     ?>
 

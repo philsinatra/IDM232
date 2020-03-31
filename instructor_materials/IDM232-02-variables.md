@@ -2,19 +2,66 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Work, 1
 
 # IDM 232
-## Scripting for<br>Interactive Digital Media II
+
+## Scripting for Interactive Digital Media II
 
 ---
 
-## Week 2
+## PHP
+
+### HTML-embedded scripting language
+
+^ Before we dive into code, it's important to understand what PHP is. PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
 ---
 
-![150%](http://digm.drexel.edu/crs/IDM232/presentations/images/php-html-code.jpg)
+### PHP Example - Inline
 
+```php
+<body>
+  <main>
+    <h1><?php echo 'Hello World'; ?></h1>
+  </main>
+</body>
+```
+
+---
+
+### PHP Example - External
+
+```php
+<?php
+  function helloWorld() {
+    return 'Hello World';
+  }
+?>
+
+<?php include 'component.php'; ?>
+<html>
+  <head>
+    ...
+```
+
+---
+
+### PHP Runs On The Server
+
+^ Let's walk through the difference between client and server side (whiteboard)
+
+---
+
+## Server Based Workflow
+
+^ Let's talk about our development workflow. (MAMP demo)
+
+---
+
+## Variables
+
+![fill](http://digm.drexel.edu/crs/IDM232/presentations/images/php-html-code.jpg)
 
 ^ Our exploration in the PHP programming language is going to begin with an exploration of the different structures or types that we can use while writing PHP. And the first of those that we're going to look at are variables. You're all familiar with variables from other programming. A variable is a symbolic representation of a value. You can think of it as a symbol that refers to something and that's going to make a lot more sense once we actually start using them. But as it's name suggests, it can change over time or vary. It has a variable value because it can point to different values. Now, in PHP, there's some rules about the kinds of names that we can give to variables.
 
@@ -48,7 +95,7 @@ theme: Plain Jane, 2
 ### Variable Names - camelCase
 
 ```php
-<?php  
+<?php
   $myVariable
 ?>
 ```
@@ -57,10 +104,10 @@ theme: Plain Jane, 2
 
 ---
 
-### Variable Names
+### Variable Names - Underscores
 
 ```php
-<?php  
+<?php
   $this_variable
   $this-variable
 ?>
@@ -70,10 +117,10 @@ theme: Plain Jane, 2
 
 ---
 
-### Variable Names
+### Variable Names - Numbers
 
 ```php
-<?php  
+<?php
   $product3
   $_book
   $__bookPage
@@ -100,16 +147,16 @@ Avoid:
 
 ---
 
-###[http://php.net/manual/en/reserved.php](http://php.net/manual/en/reserved.php)
+[http://php.net/manual/en/reserved.php](http://php.net/manual/en/reserved.php)
 
 ^ PHP actually has some words that are reserved, words that you're not allowed to use for different things, and it's a good idea to take a review of this list, and then stay away from those words as much as possible. Sometimes, it's not a problem to use it for a variable name, but it might be a problem to use it in other contexts. It's basically just names with special meaning to PHP that we don't want to use.
 
 ---
 
-## Variables
+## Variables: Numbers
 
 ```php
-<?php  
+<?php
   $var1 = 10;
 
   echo $var1;
@@ -120,10 +167,10 @@ Avoid:
 
 ---
 
-## Variables
+## Variables: Strings
 
 ```php
-<?php  
+<?php
   $var1 = "Hello world";
 
   echo $var1;
@@ -143,7 +190,7 @@ Avoid:
 ### Strings
 
 ```php
-<?php  
+<?php
   $var1 = "Hello world";
 
   echo $var1;
@@ -154,10 +201,10 @@ Avoid:
 
 ---
 
-### Strings
+### Strings & HTML
 
 ```php
-<?php  
+<?php
   $var1 = "<p>Hello world</p>";
 
   echo $var1;
@@ -168,10 +215,10 @@ Avoid:
 
 ---
 
-### Strings
+### Strings: Quotes
 
 ```php
-<?php  
+<?php
   $var1 = "Hello world";
   $var2 = 'Hello world';
 ?>
@@ -181,10 +228,10 @@ Avoid:
 
 ---
 
-### Strings
+### Strings: Concatenation
 
 ```php
-<?php  
+<?php
   $greeting = "Hello";
   $target   = "World";
   $phrase   = $greeting . " " . $target;
@@ -197,7 +244,7 @@ Avoid:
 
 ---
 
-### Strings
+### Strings: Quotes Matter
 
 ```php
   $phrase   = $greeting . " " . $target;
@@ -216,7 +263,7 @@ Avoid:
 
 ---
 
-## String Functions
+## String Functions: Example
 
 ```php
 <?php
@@ -229,7 +276,7 @@ Avoid:
 
 ---
 
-## String Functions
+## String Functions: Combined
 
 ```php
 <?php
@@ -244,7 +291,7 @@ Avoid:
 
 ---
 
-## String Functions
+## String Functions: Concatenation
 
 ```php
 <?php
@@ -263,53 +310,53 @@ Avoid:
 
 ---
 
-## String Functions
+## String Functions: Casing
 
 ```php
-Lowercase: <?php echo strtolower($thirds); ?><br>
-Uppercase: <?php echo strtoupper($thirds); ?><br>
-Uppercase first: <?php echo ucfirst($thirds); ?><br>
-Uppercase words: <?php echo ucwords($thirds); ?>
+Lowercase: <?php echo strtolower($third); ?><br>
+Uppercase: <?php echo strtoupper($third); ?><br>
+Uppercase first: <?php echo ucfirst($third); ?><br>
+Uppercase words: <?php echo ucwords($third); ?>
 ```
 
-^ Let's take a look at some string functions. This HTML includes some PHP tags calling some functions, the first is `stringtolower` which is the name of the function. Functions often take something as an argument, which serves as input into the function, and then they return output to you. So the input in this case is going to be inside the parenthesis, and it's going to be our variable `$thirds`.
+^ Let's take a look at some string functions. This HTML includes some PHP tags calling some functions, the first is `stringtolower` which is the name of the function. Functions often take something as an argument, which serves as input into the function, and then they return output to you. So the input in this case is going to be inside the parenthesis, and it's going to be our variable `$third`.
 
 ---
 
-## String Functions `strtolower($thirds)`
+## String Functions `strtolower($third)`
 
 ```php
-Lowercase: <?php echo strtolower($thirds); ?><br>
+Lowercase: <?php echo strtolower($third); ?><br>
 ```
 
 Lowercase: the quick brown fox jumped over the lazy dog.
 
 ---
 
-## String Functions `strtoupper($thirds)`
+## String Functions `strtoupper($third)`
 
 ```php
-Uppercase: <?php echo strtoupper($thirds); ?><br>
+Uppercase: <?php echo strtoupper($third); ?><br>
 ```
 
 Uppercase: THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 ---
 
-## String Functions `ucfirst($thirds)`
+## String Functions `ucfirst($third)`
 
 ```php
-Uppercase first: <?php echo ucfirst($thirds); ?><br>
+Uppercase first: <?php echo ucfirst($third); ?><br>
 ```
 
 Uppercase first: The quick brown fox jumped over the lazy dog.
 
 ---
 
-## String Functions `ucwords($thirds)`
+## String Functions `ucwords($third)`
 
 ```php
-Uppercase words: <?php echo ucwords($thirds); ?><br>
+Uppercase words: <?php echo ucwords($third); ?><br>
 ```
 
 Uppercase words: The Quick Brown Fox Jumped Over The Lazy Dog.
@@ -372,7 +419,7 @@ The super-fast brown fox jumped...
 
 uick brown
 
-^ Substring is going to make a sub string of `$third` starting at the 5th position to the tenth position of the string.
+^ Substring is going to make a sub string of `$third` starting at the fifth position to the tenth position of the string.
 
 ---
 
@@ -390,7 +437,7 @@ Find position: 10
 
 ---
 
-## String Functions
+## String Functions Review
 
 ^ So these are your first set of functions. This is the way that PHP is going to work. We're going to be able to manipulate all sorts of things by using different functions, and these are the string functions. These are not the only ones. There are a lot more and I don't expect that you will have memorized all of these.
 
@@ -415,7 +462,7 @@ Find position: 10
 
 ---
 
-## Numbers
+## Numbers & Basic Math
 
 ```php
 <?php
@@ -443,7 +490,7 @@ Basic math: <?php echo ((1 + 2 + $var1) * $var2) / 2 - 5 ?>
 
 ---
 
-## Numbers
+## Numbers: PEMDAS
 
 ```php
   $var1 = 3;
@@ -477,7 +524,7 @@ $var2 = $var2 + 1;
 
 ---
 
-## Incrementing
+## Incrementing Alternative Syntax
 
 ```php
 $var2 = 4;
@@ -504,21 +551,17 @@ echo $var2; // 3
 
 ## Numbers: Floating Points
 
-^ Now we've taken a look at integers, I'm going to to take a look at another type of number which are floating point numbers also simply called Floats, for short. You may know them more commonly as decimal numbers. That is numbers that have a decimals in them followed by a number of significant digits 2.75 is an example of a floating point number. Now, it may seem arbitrary to you if you haven't done a lot of programming before that we divide numbers into these two types. Integers and floating point, and the reason why is because computers store integers and floating points in different ways in memory.
-
----
-
-## Numbers: Floating Points
-
 ```php
 <?php echo $float = 3.14; ?>
 ```
+
+^ Now we've taken a look at integers, I'm going to to take a look at another type of number which are floating point numbers also simply called Floats, for short. You may know them more commonly as decimal numbers. That is numbers that have a decimals in them followed by a number of significant digits 2.75 is an example of a floating point number. Now, it may seem arbitrary to you if you haven't done a lot of programming before that we divide numbers into these two types. Integers and floating point, and the reason why is because computers store integers and floating points in different ways in memory.
 
 ^ This is an example of a floating number.
 
 ---
 
-## Numbers: Floating Points
+## Numbers: Floating Points Examples
 
 ```php
 <?php echo $float = 3.14; ?>
@@ -544,7 +587,7 @@ echo $var2; // 3
 
 ---
 
-## Is Integer/Float?
+## Is Integer/Float
 
 ```php
 $integer = 3;
@@ -575,7 +618,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array Syntax
 
 ```php
 <?php
@@ -589,11 +632,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array Example
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
 ?>
 ```
 
@@ -601,11 +644,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array Echo
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
   echo $numbers[1];
 ?>
 ```
@@ -614,11 +657,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Arrays Echo [Pocket 1]
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
   echo $numbers[1]; // 8
 ?>
 ```
@@ -627,11 +670,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Arrays Are Zero Indexed
 
 ```php
 <?php
-  $numbers = array(`0`,`1`,`2`);
+  $numbers = [`0`,`1`,`2`];
 ?>
 ```
 
@@ -639,11 +682,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array - Pocket 0
 
 ```php
 <?php
-  $numbers = array(4,8,15,16);
+  $numbers = [4,8,15,16];
   echo $numbers[0]; // 4
 ?>
 ```
@@ -652,11 +695,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Arrays Can Contain Anything
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
 ?>
 ```
 
@@ -664,11 +707,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array Echo Example
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[2];
 ?>
 ```
@@ -677,22 +720,22 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array: [Pocket 2]
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[2]; // dog
 ?>
 ```
 
 ---
 
-## Arrays
+## Array: [Pocket 3]
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3];
 ?>
 ```
@@ -701,11 +744,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array: [Pocket 3] = Array
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3]; // Array
 ?>
 ```
@@ -714,11 +757,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## Array: [Pocket 3][Pocket 1]
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3][1];
 ?>
 ```
@@ -727,11 +770,11 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays
+## y
 
 ```php
 <?php
-  $mixed = array(6, "fox", "dog", array("x", "y", "z"));
+  $mixed = [6, "fox", "dog", ["x", "y", "z"]];
   echo $mixed[3][1]; // y
 ?>
 ```
@@ -746,7 +789,7 @@ echo "Is {$float} numeric? " . is_numeric($float);
 
 ---
 
-## Arrays - Assigning Values
+## Arrays - Assigning Values Example
 
 ```php
 $mixed[2] = "cat";
@@ -757,10 +800,10 @@ $mixed[4] = "mouse";
 
 ---
 
-## Arrays - Assigning Values
+## Arrays - Assigning Values: New Pocket
 
 ```php
-$mixed = array(6, "fox", "dog", array("x", "y", "z"));
+$mixed = [6, "fox", "dog", ["x", "y", "z"]];
 $mixed[4] = "mouse";
 ```
 
@@ -768,7 +811,7 @@ $mixed[4] = "mouse";
 
 ---
 
-## Arrays - Assigning Values
+## Arrays - Assigning Values: Adding Pockets
 
 ```php
 $mixed[] = "horse";
@@ -813,7 +856,7 @@ $email_addresses = [
 
 ---
 
-## Associative Arrays
+## Associative Arrays Example
 
 ```php
 <?php
@@ -825,7 +868,7 @@ $email_addresses = [
 
 ---
 
-## Associative Arrays
+## Associative Arrays: `key => value`
 
 ```php
 <?php
@@ -837,7 +880,7 @@ $email_addresses = [
 
 ---
 
-## Associative Arrays
+## Associative Arrays: `keys => values`
 
 ```php
 <?php
@@ -852,7 +895,7 @@ $email_addresses = [
 
 ---
 
-## Associative Arrays
+## Echo Associative Arrays
 
 ```php
 <?php
@@ -874,11 +917,11 @@ $email_addresses = [
 
 ---
 
-## Array Functions
+## Array Functions Example
 
 ```php
 <?php
-  $numbers = array(8,23,15,42,16,4);
+  $numbers = [8,23,15,42,16,4];
 ?>
 ```
 
@@ -886,10 +929,10 @@ $email_addresses = [
 
 ---
 
-## Array Functions
+## Array Functions: Counting
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Count: <?php echo count($numbers); ?>    // 6
 Max value: <?php echo max($numbers); ?>  // 42
@@ -900,10 +943,10 @@ Min value: <?php echo min($numbers); ?>  // 4
 
 ---
 
-## Array Functions
+## Array Functions: Sorting
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
 Reverse sort: <?php rsort($numbers); print_r($numbers); ?>
@@ -913,10 +956,10 @@ Reverse sort: <?php rsort($numbers); print_r($numbers); ?>
 
 ---
 
-## Array Functions
+## Array Functions: Imploding
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
 Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
@@ -927,10 +970,10 @@ Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
 
 ---
 
-## Array Functions
+## Array Functions: Exploding
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
 Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
@@ -941,19 +984,19 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 
 ---
 
-## Array Functions
+## Array Functions: In Array
 
 ```php
-<?php $numbers = array(8,23,15,42,16,4); ?>
+<?php $numbers = [8,23,15,42,16,4]; ?>
 ```
 
-15 in array? 
+15 in array?
 
 ```php
 <?php echo in_array(15, $numbers); // returns T/F
 ```
 
-19 in array? 
+19 in array?
 
 ```php
 <?php echo in_array(19, $numbers); // returns T/F
@@ -976,7 +1019,7 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 
 ---
 
-## Booleans
+## Booleans Example
 
 ```php
 $result1 = true;
@@ -990,7 +1033,7 @@ echo $result2; //
 
 ---
 
-## Booleans
+## Booleans: Is Bool
 
 ```php
 $result1 = true;
@@ -1004,7 +1047,7 @@ result2 is boolean? <?php echo is_bool($result2); ?>
 
 ---
 
-## Booleans
+## Booleans & Conditional Statements
 
 ```php
 if (something is TRUE)
@@ -1023,10 +1066,10 @@ otherwise
 
 ---
 
-## Constants
+## Constants Example
 
 ```php
-<?php  
+<?php
   $max_width = 980;
 ?>
 ```
@@ -1035,10 +1078,10 @@ otherwise
 
 ---
 
-## Constants
+## Defining Constants (wrong)
 
 ```php
-<?php  
+<?php
   $max_width = 980;
   MAX_WIDTH = 980; // !! Does not work
 ?>
@@ -1048,10 +1091,10 @@ otherwise
 
 ---
 
-## Constants
+## Defining Constants
 
 ```php
-<?php  
+<?php
   $max_width = 980;
   define("MAX_WIDTH", 980);
   echo MAX_WIDTH;
@@ -1062,10 +1105,10 @@ otherwise
 
 ---
 
-## Constants
+## Constants Can't Change
 
 ```php
-<?php  
+<?php
   $max_width = 980;
   define("MAX_WIDTH", 980);
 
@@ -1078,4 +1121,4 @@ otherwise
 
 ---
 
-## For Next Week...
+## For Next Week

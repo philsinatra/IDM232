@@ -20,6 +20,7 @@
 - [PHP & MySQL: Novice to Ninja](https://www.amazon.com/PHP-MySQL-Novice-Kevin-Yank/dp/0987153080)
 
 ## PHP
+
 - [php.net](http://php.net)
 - [MAMP](https://www.mamp.info/en/)
 - [WAMP](http://www.wampserver.com/en/)
@@ -58,6 +59,7 @@
 
 ## Additional Software
 
+- [Visual Studio Code](https://code.visualstudio.com)
 - [Sublime Text](https://www.sublimetext.com)
 - [Atom](https://atom.io)
 - [Transmit](https://panic.com/transmit/)

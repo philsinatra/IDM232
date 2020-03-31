@@ -7,7 +7,7 @@ cd ./bin/
 ./make.sh
 ```
 
-## 04-building_with_PHP
+## 04-building\_with\_PHP
 
 This script will download an empty project shell for the examples associated with 04-building_with_PHP to your `~/Desktop/`.
 

@@ -19,6 +19,10 @@
   $img         = "http://placehold.it/350x150/990000/ffffff/";
   $description = "A placeholder image with a red background and white text.";
 
+  $title       = mysqli_real_escape_string($connection, $title);
+  $img         = mysqli_real_escape_string($connection, $img);
+  $description = mysqli_real_escape_string($connection, $description);
+
   // Step 2: Preform Database Query
   $query = "INSERT INTO images (title, img, description)
             VALUES ('{$title}', '{$img}', '{$description}')";

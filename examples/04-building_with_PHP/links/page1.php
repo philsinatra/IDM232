@@ -91,5 +91,47 @@
     ?>
   </ul>
 
+  <!-- Let's do another example, based on an associative array: -->
+  <?php
+    $my_array = [
+      [
+        "first_name" => "Homer",
+        "last_name" => "Simpson",
+        "role" => "father"
+      ],
+      [
+        "first_name" => "Marge",
+        "last_name" => "Simpson",
+        "role" => "mother"
+      ],
+      [
+        "first_name" => "Bart",
+        "last_name" => "Simpson",
+        "role" => "brother"
+      ],
+      [
+        "first_name" => "Lisa",
+        "last_name" => "Simpson",
+        "role" => "sister"
+      ],
+      [
+        "first_name" => "Maggie",
+        "last_name" => "Simpson",
+        "role" => "baby"
+      ]
+      ];
+
+      foreach ($my_array as $character) {
+        $output = "<p>";
+        $output .= $character["first_name"];
+        $output .= " ";
+        $output .= $character["last_name"];
+        $output .= " is the ";
+        $output .= $character["role"];
+        $output .= ".</p>";
+        echo $output;
+      }
+  ?>
+
 </body>
 </html>

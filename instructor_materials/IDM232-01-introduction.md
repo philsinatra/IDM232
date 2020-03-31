@@ -2,10 +2,11 @@ build-lists: true
 footer: IDM 232: Scripting for IDM II
 slidenumbers: true
 autoscale: true
-theme: Plain Jane, 2
+theme: Work, 1
 
 # IDM 232
-## Scripting for<br>Interactive Digital Media II
+
+## Scripting for Interactive Digital Media II
 
 ---
 
@@ -19,8 +20,7 @@ theme: Plain Jane, 2
 
 | Instructor | Email | Github/Twitter |
 | ---------- | ----- | ------ | ------- |
-| ![](https://avatars2.githubusercontent.com/u/1465808?v=3&s=460) Phil Sinatra | [ps42@drexel.edu](mailto:ps42@drexel.edu) | @philsinatra |
-| ![](https://avatars1.githubusercontent.com/u/1268159?v=3&s=460) Jervis Thompson | [st966rc2@drexel.edu](mailto:st966rc2@drexel.edu) | @jervo |
+| ![avatar](https://avatars2.githubusercontent.com/u/1465808?v=3&s=460) Phil Sinatra | [ps42@drexel.edu](mailto:ps42@drexel.edu) | @philsinatra |
 
 ---
 
@@ -33,7 +33,7 @@ theme: Plain Jane, 2
 
 ---
 
-## What is PHP?
+## What PHP Is
 
 - Server-side scripting language
 - Not a compiled language
@@ -61,7 +61,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Why choose PHP?
+## Why PHP
 
 - Open-source, free software
 - Cross platform
@@ -92,7 +92,7 @@ theme: Plain Jane, 2
 
 ---
 
-## Installation Overview
+## Apache, MySql, PHP Apps
 
 - LAMP
 - MAMP
@@ -133,7 +133,7 @@ $$ XAMP = (L|M|W)+Apache+MySQL+PHP $$
 
 ---
 
-### MAMP
+### MAMP for Windows
 
 ![inline](https://www.mamp.info/en/images/screenshots/en_win_mamp-start.jpg)
 
@@ -166,7 +166,7 @@ $$ XAMP = (L|M|W)+Apache+MySQL+PHP $$
 
 ---
 
-## Embedding PHP Code
+## Embedding PHP Code - Opening/Closing Tags
 
 ```php
 <?php       ?>
@@ -192,7 +192,7 @@ $$ XAMP = (L|M|W)+Apache+MySQL+PHP $$
 
 ---
 
-## Embedding PHP Code
+## Embedding PHP Code - Separating Commands
 
 ```php
 <?php
@@ -238,7 +238,7 @@ $$ XAMP = (L|M|W)+Apache+MySQL+PHP $$
 
 ---
 
-## `echo`
+## Concatenation
 
 ```php
 <?php echo "Hello" . " World"; ?>
@@ -248,7 +248,7 @@ $$ XAMP = (L|M|W)+Apache+MySQL+PHP $$
 
 ---
 
-## `echo`
+## Working With Numbers
 
 ```php
 <?php echo 2 + 3;  // 5 ?>
@@ -338,23 +338,12 @@ echo "Sure you do";
 ```php
 <?php
   // single line comment
+  # or like this
   echo "hello world.";
 ?>
 ```
 
 ^ We can make single line comments by simply opening PHP tags, and then putting in // followed by our comment, single line comments are like this.
-
----
-
-### Single Line Comments
-
-```php
-<?php
-  // single line comment
-  # or like this
-  echo "hello world.";
-?>
-```
 
 ^ Or you can use a pound sign, but this is less common. Best practice is to use the two slash method for single line comments.
 
@@ -390,28 +379,8 @@ function hello_world() {
 
 ^ There are some plugins for our editor that can really enhance our commenting and save us some time, allowing us to focus on the writing portion.
 
----
-
-![](https://youtu.be/dgV6c3_VdKk)
-
-^ DocBlockr is available for Sublime Text and Atom, and has support for all of the languages we've been learning over the past few terms. The link to the package home page is in the notes of this presentation: [https://packagecontrol.io/packages/DocBlockr](https://packagecontrol.io/packages/DocBlockr)
-
----
-
-```php
-<?php
-/**
- * [hello_world description]
- * @return [type] [description]
- */
-function hello_world() {
-  // function content here
-}
-?>
-```
-
 ^ Comments are super important to writing good code. They can be hard to be disciplined about it. You get caught up in writing the code, and often you forget to leave yourself comments. But once you start programming a lot you'll realize that comments are going to save you a lot of time, not now, but 10 weeks from now. When you come back to the code. You can't remember what you were trying to do or why you chose a certain approach. It's one of those things where investing a little bit of time in the beginning is going to save you lots of time later on. And comments are especially friendly if there's ever someone else who's going to be working with your code, because they don't know what you were thinking. They don't know the reasoning that you went through to arrive at a solution to a certain problem, but your comments can make it clear to them.
 
 ---
 
-## For Next Week...
+## For Next Week

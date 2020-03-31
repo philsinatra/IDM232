@@ -5,6 +5,7 @@
 ## `include()`
 
 1. Start with a basic HTML page:
+
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -20,6 +21,7 @@
 
 1. Separate the _header_ and _footer_ into individual include files.
 1. Show updated _index.php_ file that includes _header_ and _footer_ files.
+
     ```php
     <?php include "includes/_header.php"; ?>
     <p>Hello World</p>
@@ -27,6 +29,7 @@
     ```
 
 1. Build _functions.php_ file.
+
     ```php
     <?php
       function hello($name) {
@@ -37,6 +40,7 @@
 
 1. Explain \_header.php is a _partial_ which is why it has the leading underscore in its name.
 1. Update _index.php_ to include _functions.php_.
+
     ```php
     <?php
       include "includes/functions.php";

@@ -77,7 +77,7 @@ You'll need to edit your credentials for your file set that will be on your remo
 
 ```php
 $host = $_SERVER['HTTP_HOST'];
-if ($host == 'localhost') {
+if ($host == 'localhost:8888') {
   // Local database credentials
   $dbhost = "localhost";
   $dbuser = "root";

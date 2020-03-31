@@ -25,28 +25,28 @@
     $var2 = 4;
     $var2--;
     echo 'Decremenet $var2: ' . $var2; // 3
-   ?>
+  ?>
 
-   <hr>
+  <hr>
 
-   <?php echo "Float: " . $float = 3.14; ?><br>
-   <?php echo round($float, 1); // 3.1 ?><br>
-   <?php echo ceil($float); ?><br>
-   <?php echo floor($float); ?>
+  <?php echo "Float: " . $float = 3.14; ?><br>
+  <?php echo round($float, 1); // 3.1 ?><br>
+  <?php echo ceil($float); ?><br>
+  <?php echo floor($float); ?>
 
-   <hr>
+  <hr>
 
-   <?php
-     $integer = 3;
-     $float = 3.14;
+  <?php
+    $integer = 3;
+    $float = 3.14;
 
-     echo "Is {$integer} integer? " . is_int($integer);
-     echo "<br>";
-     echo "Is {$integer} float? " . is_float($float);
-     echo "<br>";
-     echo "Is {$integer} numeric? " . is_numeric($integer);
-     echo "<br>";
-     echo "Is {$float} numeric? " . is_numeric($float);
-   ?>
+    echo "Is {$integer} integer? " . is_int($integer);
+    echo "<br>";
+    echo "Is {$integer} float? " . is_float($float);
+    echo "<br>";
+    echo "Is {$integer} numeric? " . is_numeric($integer);
+    echo "<br>";
+    echo "Is {$float} numeric? " . is_numeric($float);
+  ?>
 </body>
 </html>

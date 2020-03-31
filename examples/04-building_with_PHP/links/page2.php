@@ -19,21 +19,15 @@
     <?php print_r($_GET); ?>
   </pre>
 
-
-
-
   <!--
   You can put any parameters in the URL you want and reload the page.
   EXAMPLE: id=34&name=Phil
   -->
 
-
-
-
   <!--
   We know how to access the values that are stored in associate arrays.
   So instead of a print_r, let's set up a variable and assign it to the
-  paramater value.
+  parameter value.
   -->
   <?php
     /**
@@ -43,8 +37,6 @@
     $id = $_GET['id'];
     echo "ID: {$id}";
   ?>
-
-
 
   <!--
   (Go back to page1.php and build another nav list that uses this page as a template.)
