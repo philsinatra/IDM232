@@ -15,6 +15,7 @@
     - [Drexel University Policy on Cheating](#drexel-university-policy-on-cheating)
   - [Statement for Students with Disabilities](#statement-for-students-with-disabilities)
   - [Acknowledging Conditions and Obligations in Syllabus](#acknowledging-conditions-and-obligations-in-syllabus)
+  - [COVID 19 Addendum](#covid-19-addendum)
 
 ## Description
 
@@ -139,3 +140,7 @@ Students with disabilities requesting accommodations and services at Drexel Univ
 The syllabus is a contract between the instructor and the student. It is very important that each student has read and understood all of the materials, assignments and due dates on the syllabus. The student acknowledges receipt of this syllabus and the information herein contained by continuing to attend classes and turn in assignments.
 
 This syllabus is intended as a guideline. The instructor reserves the right to change from it in interest of responding to individual class need.
+
+## COVID 19 Addendum
+
+[COVID 19 Addendum](https://github.com/Drexel-University-IDM/COVID19)
