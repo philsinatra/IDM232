@@ -15,6 +15,7 @@
     - [Drexel University Policy on Cheating](#drexel-university-policy-on-cheating)
   - [Statement for Students with Disabilities](#statement-for-students-with-disabilities)
   - [Acknowledging Conditions and Obligations in Syllabus](#acknowledging-conditions-and-obligations-in-syllabus)
+  - [COVID 19 Addendum](#covid-19-addendum)
 
 ## Description
 
@@ -51,8 +52,9 @@ By the end of the course, student will be able to
 
 | Aspect | Point Value |
 | ------ | ----------: |
-| Alpha | 25 |
-| Beta | 25 |
+| Attendance | 10 |
+| Alpha | 20 |
+| Beta | 20 |
 | Case Study | 10 |
 | Final Project | 40 |
 
@@ -83,7 +85,17 @@ Critiques are opportunities to learn and share what you’ve learned through dem
 
 ## Attendance Policy
 
-Attendance is mandatory. Students are expected to attend all classes and strictly adhere to the project due dates. Lack of participation in class discussions will count against your grade. Students are allowed one unexcused absence. If a student has more than one unexcused absence, his or her grade for the course will be reduced one letter grade. If a student has three or more absences, he or she will receive an F grade. Please also see the official Drexel University Policy on Absences at [http://www.drexel.edu/provost/policyweb/absence.html](http://www.drexel.edu/provost/policyweb/absence.html)
+Attendance is mandatory. Students are expected to attend all classes and strictly adhere to the project due dates. Lack of participation in class discussions will count against your grade. If a student has more than one unexcused absence, his or her grade for the course will be reduced one letter grade. If a student has three or more absences, he or she will receive an F grade. Please also see the official Drexel University Policy on Absences at [http://www.drexel.edu/provost/policyweb/absence.html](http://www.drexel.edu/provost/policyweb/absence.html)
+
+- Each on time arrival will earn 10 points.
+- Unexcused late arrivals will earn 7 points.
+- Unexcused absences earn 0 points.
+- Students arriving more than 15 minutes after the class has begun or leaving before the class has been dismissed will be considered absent.
+- If the student arrives late, it is his or her duty to check with the instructor to change their absence to a late before the end of class (but not during lecture).
+- If a student has three or more unexcused absences, they will receive an F grade for the course.
+- **Attendance will not be changed for previous weeks.**
+
+The cumulative of these points will count for 10% of the final grade.
 
 ## Add, Drop and Withdrawal Policies
 
@@ -128,3 +140,7 @@ Students with disabilities requesting accommodations and services at Drexel Univ
 The syllabus is a contract between the instructor and the student. It is very important that each student has read and understood all of the materials, assignments and due dates on the syllabus. The student acknowledges receipt of this syllabus and the information herein contained by continuing to attend classes and turn in assignments.
 
 This syllabus is intended as a guideline. The instructor reserves the right to change from it in interest of responding to individual class need.
+
+## COVID 19 Addendum
+
+[COVID 19 Addendum](https://github.com/Drexel-University-IDM/COVID19)
