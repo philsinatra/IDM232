@@ -51,7 +51,6 @@ Thumbs.db
 *.jpg
 *.png
 *.gif
-/assignments
 examples/week7/app/build/question-*.html
 graphics
 inbox
