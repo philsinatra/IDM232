@@ -21,6 +21,7 @@ theme: Work, 1
 | Instructor | Email | Github/Twitter |
 | ---------- | ----- | ------ | ------- |
 | ![avatar](https://avatars2.githubusercontent.com/u/1465808?v=3&s=460) Phil Sinatra | [ps42@drexel.edu](mailto:ps42@drexel.edu) | @philsinatra |
+| ![avatar](http://jervo.com/JervoWebPhotoAlbum/images/geekonkeyboard_216x216.gif) Jervis | [st966rc2@drexel.edu](mailto:st966rc2@drexel.edu) | @jervo |
 
 ---
 
@@ -115,39 +116,13 @@ $$ XAMP = (L|M|W)+Apache+MySQL+PHP $$
 
 ---
 
-## Mac Installation
+## MAMP Installation
 
 ![inline](http://digm.drexel.edu/crs/IDM232/presentations/images/mamp.png)
 
 [https://www.mamp.info/en/](https://www.mamp.info/en/)
 
 ^ For Mac users, that application is going to be MAMP. It is available for download at [https://www.mamp.info/en/](https://www.mamp.info/en/). There is a free version and a pro version. The free version will be fine for this class. If you develop more complicated projects or require multiple web servers to run at the same time, the pro version is worth the upgrade cost.
-
----
-
-### MAMP
-
-![inline](https://www.mamp.info/en/images/screenshots/en_mamp-start.jpg)
-
-^ This is what the running application looks like. You can turn on the Apache web server and MySQL server by clicking a button, and there are a full list of preferences available for making changes to your setup at any time.
-
----
-
-### MAMP for Windows
-
-![inline](https://www.mamp.info/en/images/screenshots/en_win_mamp-start.jpg)
-
-^ There is a Windows version of this application available, I have never tried it before but it may be worth testing if you are a Windows developer simply because of the ease of use.
-
----
-
-## Windows Installation
-
-![inline](http://digm.drexel.edu/crs/IDM232/presentations/images/wamp.png)
-
-[http://www.wampserver.com/en/](http://www.wampserver.com/en/)
-
-^ For Windows users, you can try the MAMP version for Windows, or you can use WAMPServer, shown here. I have included additional notes about WAMP installation and setup in the `docs` section of the repository.
 
 ---
 

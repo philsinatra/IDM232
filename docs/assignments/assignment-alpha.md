@@ -21,9 +21,9 @@ You do not have to create every single page for the entire final project. Instea
 
 ## Submitting the Assignment
 
-Submit the following items in [Drexel Blackboard](https://learn.dcollege.net/) under **Alpha**:
+Submit the following items in [Drexel Blackboard](https://learn.dcollege.net/) under **Alpha** - Assignment Submission:
 
 1. A link to your self hosted prototype page. From this page, I can fully engage the project and have access to all supplementary pages and functions.
-1. A link to your GitHub repository containing the code for your project.
+1. A link to your GitHub repository (i.e. "idm232-abc123") containing the code for your project.
 
 **Late submissions receive zero points.**
