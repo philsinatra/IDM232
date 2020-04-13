@@ -949,7 +949,10 @@ Min value: <?php echo min($numbers); ?>  // 4
 <?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
+// ( [0] => 4 [1] => 8 [2] => 15 [3] => 16 [4] => 23 [5] => 42 )
+
 Reverse sort: <?php rsort($numbers); print_r($numbers); ?>
+// ( [0] => 42 [1] => 23 [2] => 16 [3] => 15 [4] => 8 [5] => 4 )
 ```
 
 ^ We can also sort those values, using `sort` and `rsort`. I'm also using a new function here `print_r` which is a debugging tool that will allow us to see the values of an array in the browser (example).
@@ -962,8 +965,10 @@ Reverse sort: <?php rsort($numbers); print_r($numbers); ?>
 <?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
+// ( [0] => 4 [1] => 8 [2] => 15 [3] => 16 [4] => 23 [5] => 42 )
+
 Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
-// 42 * 23 * 16 * 15 * 8 * 4
+// 4 * 8 * 15 * 16 * 23 * 42
 ```
 
 ^ Another handy function is how we can turn an array into a string. We can combine values together to get a string using `implode`. The first argument is what the separator is between each of those elements. So here, I've said that it's a space, asterisk and a space. The `$num_string` variable isn't an array anymore, it's a string.
@@ -976,8 +981,13 @@ Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
 <?php $numbers = [8,23,15,42,16,4]; ?>
 
 Sort: <?php sort($numbers); print_r($numbers); ?>
+// ( [0] => 4 [1] => 8 [2] => 15 [3] => 16 [4] => 23 [5] => 42 )
+
 Implode: <?php echo $num_string = implode(" * ", $numbers); ?>
+// 4 * 8 * 15 * 16 * 23 * 42
+
 Explode: <?php print_r(explode(" * ", $num_string)); ?>
+// ( [0] => 4 [1] => 8 [2] => 15 [3] => 16 [4] => 23 [5] => 42 )
 ```
 
 ^ The opposite of `implode` is `explode`, which is going to take a string like `$num_string` and every time it finds this first parameter string (" * "), it's going to use it as a divider between values. So every time is sees a space and then an asterisk space, it's going to split the string into a new object in the array.
@@ -993,13 +1003,13 @@ Explode: <?php print_r(explode(" * ", $num_string)); ?>
 15 in array?
 
 ```php
-<?php echo in_array(15, $numbers); // returns T/F
+<?php echo in_array(15, $numbers); ?> // returns T/F
 ```
 
 19 in array?
 
 ```php
-<?php echo in_array(19, $numbers); // returns T/F
+<?php echo in_array(19, $numbers); ?> // returns T/F
 ```
 
 15 in array? 1

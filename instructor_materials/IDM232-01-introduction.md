@@ -18,10 +18,10 @@ theme: Work, 1
 
 ## Hello
 
-| Instructor | Email |
-| ---------- | ----- |
-| ![avatar](https://avatars2.githubusercontent.com/u/1465808?v=3&s=460) Phil Sinatra | [ps42@drexel.edu](mailto:ps42@drexel.edu) |
-| ![avatar](http://jervo.com/JervoWebPhotoAlbum/images/geekonkeyboard_216x216.gif) Jervis Thompson | [st966rc2@drexel.edu](mailto:st966rc2@drexel.edu) |
+| Instructor | Email | Github/Twitter |
+| ---------- | ----- | ------ | ------- |
+| ![avatar](https://avatars2.githubusercontent.com/u/1465808?v=3&s=460) Phil Sinatra | [ps42@drexel.edu](mailto:ps42@drexel.edu) | @philsinatra |
+| ![avatar](http://jervo.com/JervoWebPhotoAlbum/images/geekonkeyboard_216x216.gif) Jervis | [st966rc2@drexel.edu](mailto:st966rc2@drexel.edu) | @jervo |
 
 ---
 
