@@ -52,7 +52,7 @@ Thumbs.db
 *.png
 *.gif
 /assignments
-examples/week7/app/build/question-*.html
+/examples/07-data_types/make
 graphics
 inbox
 instructor_materials/workshop-instructor_notes.md

@@ -55,7 +55,7 @@ We could build the JSON file by hand, copying and pasting values from excel into
 
 ## Initialize Gen Script
 
-- **File**: `./app/gen.php`
+- **File**: `./app/bin/gen.php`
 
 Get the contents of the `.json` file. This information is stored in the `$json` variable as a _string_.
 
